@@ -22,8 +22,8 @@ import galleryPhoto3 from "../../assets/gallery/IMG-20240313-WA0503.jpg";
 import galleryPhoto4 from "../../assets/gallery/IMG-20240313-WA0507.jpg";
 import galleryPhoto5 from "../../assets/gallery/IMG-20260401-WA0430.jpg";
 import galleryPhoto6 from "../../assets/gallery/IMG-20260401-WA0437.jpg";
-import galleryPhoto7 from "../../assets/gallery/IMG20250111095535.jpg";
-import galleryPhoto8 from "../../assets/gallery/IMG20250111095541.jpg";
+// import galleryPhoto7 from "../../assets/gallery/IMG20250111095535.jpg";
+
 import galleryPhoto9 from "../../assets/gallery/IMG_6886 - Copy.JPG";
 import galleryPhoto10 from "../../assets/gallery/photo1.jpg";
 import galleryPhoto11 from "../../assets/gallery/photo2.png";
@@ -191,19 +191,19 @@ const achievements = [
 
 // Gallery photos array — caption apne hisaab se baad me badal lena
 const galleryPhotos = [
-  { src: galleryPhoto1, caption: "Moment 1" },
-  { src: galleryPhoto2, caption: "Moment 2" },
-  { src: galleryPhoto3, caption: "Moment 3" },
-  { src: galleryPhoto4, caption: "Moment 4" },
-  { src: galleryPhoto5, caption: "Moment 5" },
-  { src: galleryPhoto6, caption: "Moment 6" },
-  { src: galleryPhoto7, caption: "Moment 7" },
-  { src: galleryPhoto8, caption: "Moment 8" },
-  { src: galleryPhoto9, caption: "Moment 9" },
+  { src: galleryPhoto1, caption: "On Stage Moment 1" },
+  { src: galleryPhoto2, caption: "On Stage Moment 2" },
+  { src: galleryPhoto3, caption: "On Stage Moment 3" },
+  { src: galleryPhoto4, caption: "On Stage Moment 4" },
+  { src: galleryPhoto5, caption: "On Stage Moment 5" },
+  { src: galleryPhoto6, caption: "On Stage Moment 6" },
+  // { src: galleryPhoto7, caption: "Orientation Of Juniors" },
+
+  { src: galleryPhoto9, caption: "On Stage Moment 9" },
   { src: galleryPhoto10, caption: "Anchoring — Vihaan 2K26" },
-  { src: galleryPhoto11, caption: "Academic Award — T&P Department" },
-  { src: galleryPhoto12, caption: "On Stage" },
-  { src: galleryPhoto13, caption: "Radha Group of Institutes" },
+  { src: galleryPhoto11, caption: "On Stage Moment 11" },
+  { src: galleryPhoto12, caption: "On Stage Moment 12" },
+  { src: galleryPhoto13, caption: " Chairman of Radharaman Group" },
 ];
 
 // Rows duplicate kar dete hai taaki scroll seamless/infinite lage
