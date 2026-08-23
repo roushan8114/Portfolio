@@ -9,13 +9,7 @@ import {
 import Particles from "../../Components/Particles";
 import profilePic from "../../assets/profilepic.png";
 
-// =========================
-// GALLERY PHOTOS
-// Saari photos jo tumhare assets/gallery folder me thi, sab yahan hain.
-// Caption baad me khud se edit kar lena — jo black t-shirt wali award/
-// certificate photo hai uska caption "Academic Award — T&P Department"
-// jaisa kuch rakh dena.
-// =========================
+
 import galleryPhoto1 from "../../assets/gallery/DSC_0368.JPG";
 import galleryPhoto2 from "../../assets/gallery/DSC_0369.JPG";
 import galleryPhoto3 from "../../assets/gallery/IMG-20240313-WA0503.jpg";
@@ -31,9 +25,7 @@ import galleryPhoto12 from "../../assets/gallery/photo3.jpg";
 import galleryPhoto13 from "../../assets/gallery/photo4.jpg";
 
 
-// =========================
-// DATA
-// =========================
+
 
 const roles = [
   "Full Stack Developer",
@@ -153,13 +145,13 @@ const experience = [
       "Built Django applications, authentication systems, REST APIs, CRUD applications and database-driven platforms.",
   },
 
-  {
-    year: "3 Years", // <-- yahan exact saal daal dena, jaise "2022 — 2025"
-    title: "Head Student Coordinator",
-    company: "Training & Placement Department, College",
-    description:
-      "Led student coordination for the Training & Placement Department for 3 years — managing placement drives, coordinating between students and recruiters, and organizing training sessions and campus events.",
-  },
+  // {
+  //   year: "3 Years", // <-- yahan exact saal daal dena, jaise "2022 — 2025"
+  //   title: "Head Student Coordinator",
+  //   company: "Training & Placement Department, College",
+  //   description:
+  //     "Led student coordination for the Training & Placement Department for 3 years — managing placement drives, coordinating between students and recruiters, and organizing training sessions and campus events.",
+  // },
 
   {
     year: "2022 — 2024",
@@ -170,7 +162,7 @@ const experience = [
   },
 ];
 
-// Academic achievements — 3x Award Winner
+
 const achievements = [
   {
     year: "2nd Year",
@@ -189,7 +181,7 @@ const achievements = [
   },
 ];
 
-// Gallery photos array — caption apne hisaab se baad me badal lena
+
 const galleryPhotos = [
   { src: galleryPhoto1, caption: "On Stage Moment 1" },
   { src: galleryPhoto2, caption: "On Stage Moment 2" },
@@ -211,9 +203,6 @@ const galleryRowOne = [...galleryPhotos, ...galleryPhotos];
 const galleryRowTwo = [...galleryPhotos, ...galleryPhotos].reverse();
 
 
-// =========================
-// TYPEWRITER
-// =========================
 
 function useTypewriter(items) {
   const [text, setText] = useState("");
@@ -253,9 +242,6 @@ function useTypewriter(items) {
 }
 
 
-// =========================
-// REVEAL COMPONENT
-// =========================
 
 function Reveal({ children, delay = 0, className = "" }) {
   return (
@@ -287,9 +273,6 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 
-// =========================
-// 3D TILT CARD
-// =========================
 
 function TiltCard({ children, className = "", onMouseEnter, onMouseLeave }) {
   const ref = useRef(null);
@@ -361,9 +344,6 @@ function TiltCard({ children, className = "", onMouseEnter, onMouseLeave }) {
 }
 
 
-// =========================
-// COUNTER
-// =========================
 
 function Counter({ value }) {
   const [count, setCount] = useState(0);
@@ -387,11 +367,6 @@ function Counter({ value }) {
 
   return count;
 }
-
-
-// =========================
-// GALLERY ROW (auto-scroll)
-// =========================
 
 function GalleryRow({ items, duration, reverse = false }) {
   return (
@@ -422,9 +397,6 @@ function GalleryRow({ items, duration, reverse = false }) {
 }
 
 
-// =========================
-// MAIN HOME
-// =========================
 
 function Home() {
   const role = useTypewriter(roles);
@@ -457,9 +429,7 @@ function Home() {
   }, []);
 
 
-  // =========================
-  // CSS
-  // =========================
+  
 
   const styles = useMemo(
     () => `
@@ -500,10 +470,6 @@ function Home() {
     }
 
 
-    /* =========================
-       MAIN
-    ========================= */
-
     .portfolio {
       min-height: 100vh;
       overflow: hidden;
@@ -525,9 +491,7 @@ function Home() {
     }
 
 
-    /* =========================
-       NOISE
-    ========================= */
+    
 
     .noise {
       position: fixed;
@@ -542,9 +506,7 @@ function Home() {
     }
 
 
-    /* =========================
-       MOUSE GLOW
-    ========================= */
+  
 
     .mouse-glow {
       position: fixed;
@@ -571,9 +533,6 @@ function Home() {
     }
 
 
-    /* =========================
-       NAVBAR
-    ========================= */
 
     .navbar {
       position: fixed;
@@ -684,9 +643,6 @@ function Home() {
     }
 
 
-    /* =========================
-       HERO
-    ========================= */
 
     .hero {
       min-height: 100vh;
@@ -772,9 +728,6 @@ function Home() {
     }
 
 
-    /* =========================
-       HERO CONTENT
-    ========================= */
 
     .availability {
       display: inline-flex;
@@ -944,9 +897,6 @@ function Home() {
     }
 
 
-    /* =========================
-       BUTTONS
-    ========================= */
 
     .button-row {
       display: flex;
@@ -1052,9 +1002,6 @@ function Home() {
     }
 
 
-    /* =========================
-       PROFILE
-    ========================= */
 
     .profile-container {
       position: relative;
@@ -1190,9 +1137,6 @@ function Home() {
     }
 
 
-    /* =========================
-       STATS
-    ========================= */
 
     .stats {
       max-width: 1250px;
@@ -1238,10 +1182,6 @@ function Home() {
       font-size: 12px;
     }
 
-
-    /* =========================
-       SECTION
-    ========================= */
 
     .section {
       position: relative;
@@ -1323,9 +1263,7 @@ function Home() {
     }
 
 
-    /* =========================
-       ABOUT
-    ========================= */
+   
 
     .about-grid {
       margin-top: 55px;
@@ -1418,9 +1356,6 @@ function Home() {
     }
 
 
-    /* =========================
-       SKILLS
-    ========================= */
 
     .skills-grid {
       margin-top: 55px;
@@ -1488,9 +1423,6 @@ function Home() {
     }
 
 
-    /* =========================
-       TECH MARQUEE
-    ========================= */
 
     .technology-wrapper {
       margin-top: 40px;
@@ -1552,9 +1484,7 @@ function Home() {
     }
 
 
-    /* =========================
-       EXPERIENCE
-    ========================= */
+ 
 
     .timeline {
       margin-top: 60px;
@@ -1635,9 +1565,6 @@ function Home() {
     }
 
 
-    /* =========================
-       PROJECTS
-    ========================= */
 
     .projects-grid {
       margin-top: 55px;
@@ -1804,9 +1731,7 @@ function Home() {
     }
 
 
-    /* =========================
-       ACHIEVEMENTS
-    ========================= */
+   
 
     .achievements-grid {
       margin-top: 55px;
@@ -1879,9 +1804,7 @@ function Home() {
     }
 
 
-    /* =========================
-       GALLERY (auto-scrolling photos)
-    ========================= */
+
 
     .gallery-row-wrapper {
       overflow: hidden;
@@ -1993,9 +1916,7 @@ function Home() {
     }
 
 
-    /* =========================
-       CONTACT
-    ========================= */
+
 
     .contact-box {
       margin-top: 55px;
@@ -2116,9 +2037,7 @@ function Home() {
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+
 
     .footer {
       padding:
@@ -2137,9 +2056,6 @@ function Home() {
     }
 
 
-    /* =========================
-       TABLET
-    ========================= */
 
     @media (max-width: 900px) {
 
@@ -2179,9 +2095,6 @@ function Home() {
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 700px) {
 
@@ -2300,9 +2213,7 @@ function Home() {
   );
 
 
-  // =========================
-  // SCROLL
-  // =========================
+
 
   const scrollToSection = (id) => {
     document
@@ -2321,12 +2232,11 @@ function Home() {
 
       <div className="portfolio">
 
-        {/* NOISE */}
+   
 
         <div className="noise" />
 
 
-        {/* MOUSE GLOW */}
 
         <motion.div
           className="mouse-glow"
@@ -2342,9 +2252,6 @@ function Home() {
         />
 
 
-        {/* =========================
-            NAVBAR
-        ========================= */}
 
         <header className="navbar">
 
@@ -2418,10 +2325,6 @@ function Home() {
         </header>
 
 
-        {/* =========================
-            HERO
-        ========================= */}
-
         <section
           id="home"
           className="hero"
@@ -2446,7 +2349,6 @@ function Home() {
           </div>
 
 
-          {/* ORBS */}
 
           <motion.div
             className="hero-orb orb-one"
@@ -2480,7 +2382,6 @@ function Home() {
 
           <div className="hero-container">
 
-            {/* HERO TEXT */}
 
             <Reveal>
 
@@ -2635,7 +2536,6 @@ function Home() {
             </Reveal>
 
 
-            {/* PROFILE */}
 
             <Reveal delay={0.2}>
 
@@ -2695,9 +2595,6 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            STATS
-        ========================= */}
 
         <div className="stats">
 
@@ -2742,9 +2639,6 @@ function Home() {
         </div>
 
 
-        {/* =========================
-            ABOUT
-        ========================= */}
 
         <section
           id="about"
@@ -2836,9 +2730,6 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            SKILLS
-        ========================= */}
 
         <section
           id="skills"
@@ -2931,7 +2822,6 @@ function Home() {
             </div>
 
 
-            {/* TECHNOLOGIES */}
 
             <Reveal delay={0.2}>
 
@@ -2968,9 +2858,6 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            EXPERIENCE
-        ========================= */}
 
         <section
           id="experience"
@@ -3050,9 +2937,7 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            PROJECTS
-        ========================= */}
+    
 
         <section
           id="projects"
@@ -3208,9 +3093,6 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            ACHIEVEMENTS
-        ========================= */}
 
         <section
           id="achievements"
@@ -3283,9 +3165,7 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            GALLERY
-        ========================= */}
+        
 
         <section
           id="gallery"
@@ -3324,9 +3204,6 @@ function Home() {
         </section>
 
 
-        {/* =========================
-            CONTACT
-        ========================= */}
 
         <section
           id="contact"
@@ -3370,7 +3247,7 @@ function Home() {
 
                     <a
                       className="button primary-button"
-                      href="mailto:hello@example.com"
+                      href="mailto:roushan8114@gmail.com"
                     >
                       Send Me an Email →
                     </a>
@@ -3378,7 +3255,7 @@ function Home() {
 
                     <a
                       className="button secondary-button"
-                      href="https://github.com/roushan-rajput"
+                      href="https://github.com/roushan8114"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -3388,7 +3265,7 @@ function Home() {
 
                     <a
                       className="button secondary-button"
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/in/roushan999"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -3406,11 +3283,6 @@ function Home() {
           </div>
 
         </section>
-
-
-        {/* =========================
-            FOOTER
-        ========================= */}
 
         <footer className="footer">
 
