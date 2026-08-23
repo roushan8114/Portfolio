@@ -2310,7 +2310,7 @@ function Home() {
 
 
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1U2DW5YY9ZGBqn2ZuS0IyyjVxeJuISWV_/view?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
                 className="resume-btn"
