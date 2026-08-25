@@ -3187,50 +3187,88 @@ function Home() {
 
 
 
-        {/* =========================================================
-            MANAGEMENT & LEADERSHIP
-        ========================================================= */}
-
-        {/* ================= EXPERIENCE / LEADERSHIP SECTION ================= */}
         <section className="experience-section" id="experience">
           <div className="experience-container">
 
-            <div className="experience-heading">
-              <span className="section-small-title">EXPERIENCE</span>
+            {/* ================= TOP CONTENT ================= */}
 
-              <h2>
-                Leadership &{" "}
-                <span>Achievements</span>
-              </h2>
+            <div className="experience-top">
 
-              <p>
-                My journey as a Head Student Volunteer in the Training and
-                Placement Department, working with students, faculty and
-                placement teams while taking responsibility for coordination,
-                leadership and event management.
-              </p>
+              {/* LEFT - HEADING */}
+              <div className="experience-heading">
+                <span className="section-small-title">EXPERIENCE</span>
+
+                <h2>
+                  Leadership &{" "}
+                  <span>Achievements</span>
+                </h2>
+
+                <p>
+                  My journey as a Head Student Volunteer in the Training and
+                  Placement Department, working with students, faculty and
+                  placement teams while taking responsibility for coordination,
+                  leadership and event management.
+                </p>
+              </div>
+
+
+              {/* RIGHT - EXPERIENCE HIGHLIGHT */}
+              <div className="years-card">
+
+                <div className="years-top">
+                  <span className="years-label">EXPERIENCE</span>
+
+                  <span className="years-dot"></span>
+                </div>
+
+                <div className="years-number">
+                  3<span>+</span>
+                </div>
+
+                <div className="years-title">
+                  YEARS OF LEADERSHIP
+                </div>
+
+                <p>
+                  Training & Placement Department
+                </p>
+
+                <div className="years-line"></div>
+
+                <span className="years-role">
+                  Head Student Volunteer
+                </span>
+
+              </div>
+
             </div>
 
-            {/* Floating Photos */}
+
+            {/* ================= FLOATING PHOTOS ================= */}
+
             <div className="experience-gallery">
 
               {/* Landscape Photo */}
               <div className="experience-card landscape-card card-1">
+
                 <img
-                  src="/experience/IMG-20240728-WA0009(1).jpg"
+                  src="src/assets/gallery/IMG-20260610-WA0021.jpg"
                   alt="Training and Placement Team"
                 />
 
                 <div className="experience-overlay">
-                  <h3>Team & Leadership</h3>
+                  <h3>Core Leadership</h3>
                   <p>Training & Placement Department</p>
                 </div>
+
               </div>
+
 
               {/* Portrait Photo */}
               <div className="experience-card portrait-card card-2">
+
                 <img
-                  src="/experience/IMG-20260610-WA0026(1).jpg"
+                  src="src/assets/gallery/IMG-20260610-WA0106.jpg"
                   alt="Award and Certificate"
                 />
 
@@ -3238,38 +3276,49 @@ function Home() {
                   <h3>Recognition</h3>
                   <p>Certificate & Award</p>
                 </div>
+
               </div>
+
 
               {/* Landscape Photo */}
               <div className="experience-card landscape-card card-3">
+
                 <img
-                  src="/experience/IMG-20260610-WA0033(1).jpg"
+                  src="src/assets/gallery/IMG-20260610-WA0107.jpg"
                   alt="Team Achievement"
                 />
 
                 <div className="experience-overlay">
-                  <h3>Team Achievement</h3>
+                  <h3>Achievement</h3>
                   <p>Leadership & Teamwork</p>
                 </div>
+
               </div>
+
 
               {/* Landscape Photo */}
-              <div className="experience-card landscape-card card-4">
-                <img
-                  src="/experience/IMG-20260610-WA0035(1).jpg"
-                  alt="Leadership Moment"
-                />
+              {/* 
+      <div className="experience-card landscape-card card-4">
 
-                <div className="experience-overlay">
-                  <h3>Leadership</h3>
-                  <p>Working with the Team</p>
-                </div>
-              </div>
+        <img
+          src="src/assets/gallery/IMG-20260610-WA0059.jpg"
+          alt="Leadership Moment"
+        />
+
+        <div className="experience-overlay">
+          <h3>Leadership</h3>
+          <p>Working with the Team</p>
+        </div>
+
+      </div>
+      */}
+
 
               {/* Landscape Photo */}
               <div className="experience-card landscape-card card-5">
+
                 <img
-                  src="/experience/IMG-20260610-WA0043.jpg"
+                  src="src/assets/gallery/IMG-20260610-WA0035.jpg"
                   alt="Placement Team"
                 />
 
@@ -3277,12 +3326,15 @@ function Home() {
                   <h3>Placement Team</h3>
                   <p>Training & Placement Activities</p>
                 </div>
+
               </div>
+
 
               {/* Portrait Photo */}
               <div className="experience-card portrait-card card-6">
+
                 <img
-                  src="/experience/IMG-20260610-WA0059.jpg"
+                  src="src/assets/gallery/IMG-20260610-WA0026.jpg"
                   alt="Certificate Achievement"
                 />
 
@@ -3290,40 +3342,14 @@ function Home() {
                   <h3>Achievement</h3>
                   <p>Head Student Volunteer</p>
                 </div>
+
               </div>
-
-              {/* Portrait Photo */}
-              <div className="experience-card portrait-card card-7">
-                <img
-                  src="/experience/IMG-20260610-WA0106(2).jpg"
-                  alt="Certificate Recognition"
-                />
-
-                <div className="experience-overlay">
-                  <h3>Recognition</h3>
-                  <p>Leadership Award</p>
-                </div>
-              </div>
-
-              {/* Portrait Photo */}
-              <div className="experience-card portrait-card card-8">
-                <img
-                  src="/experience/IMG-20260610-WA0107(2).jpg"
-                  alt="Honouring Moment"
-                />
-
-                <div className="experience-overlay">
-                  <h3>Honouring</h3>
-                  <p>Leadership & Contribution</p>
-                </div>
-              </div>
-
             </div>
           </div>
-
           <style>{`
-
-    /* ================= EXPERIENCE SECTION ================= */
+    /* =========================================================
+       EXPERIENCE SECTION
+    ========================================================= */
 
     .experience-section {
       width: 100%;
@@ -3337,25 +3363,58 @@ function Home() {
       margin: 0 auto;
     }
 
+
+    /* =========================================================
+       TOP SECTION
+    ========================================================= */
+
+    .experience-top {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 0.7fr);
+
+      gap: 70px;
+
+      align-items: center;
+
+      margin-bottom: 75px;
+    }
+
+
+    /* =========================================================
+       HEADING
+    ========================================================= */
+
     .experience-heading {
       max-width: 850px;
-      margin-bottom: 70px;
     }
 
     .section-small-title {
       display: inline-block;
+
       font-size: 13px;
+
       letter-spacing: 4px;
+
       font-weight: 600;
+
       margin-bottom: 15px;
+
       opacity: 0.65;
     }
 
     .experience-heading h2 {
       font-size: clamp(42px, 5vw, 72px);
+
       line-height: 1;
+
       margin: 0 0 25px;
+
       font-weight: 700;
+
+      letter-spacing: -2px;
     }
 
     .experience-heading h2 span {
@@ -3364,31 +3423,214 @@ function Home() {
 
     .experience-heading p {
       max-width: 750px;
+
       font-size: 16px;
+
       line-height: 1.8;
+
       opacity: 0.7;
+
       margin: 0;
     }
 
-    /* ================= GALLERY ================= */
+
+    /* =========================================================
+       3+ YEARS CARD
+    ========================================================= */
+
+    .years-card {
+      position: relative;
+
+      min-height: 290px;
+
+      padding: 30px;
+
+      border-radius: 28px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.10),
+          rgba(255,255,255,0.025)
+        );
+
+      border: 1px solid rgba(255,255,255,0.13);
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.18);
+
+      backdrop-filter: blur(15px);
+
+      transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+    }
+
+    .years-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      top: -80px;
+      right: -70px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,0.08);
+
+      filter: blur(5px);
+    }
+
+    .years-card:hover {
+      transform: translateY(-10px);
+
+      box-shadow:
+        0 35px 100px rgba(0,0,0,0.25);
+
+      border-color:
+        rgba(255,255,255,0.25);
+    }
+
+
+    .years-top {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+    }
+
+    .years-label {
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      opacity: 0.6;
+
+      font-weight: 600;
+    }
+
+    .years-dot {
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: currentColor;
+
+      opacity: 0.7;
+
+      box-shadow:
+        0 0 20px currentColor;
+    }
+
+
+    .years-number {
+      margin-top: 20px;
+
+      font-size: clamp(75px, 8vw, 110px);
+
+      line-height: 0.85;
+
+      font-weight: 800;
+
+      letter-spacing: -7px;
+    }
+
+    .years-number span {
+      font-size: 42px;
+
+      opacity: 0.5;
+
+      margin-left: 5px;
+    }
+
+
+    .years-title {
+      margin-top: 15px;
+
+      font-size: 14px;
+
+      letter-spacing: 2.5px;
+
+      font-weight: 700;
+    }
+
+    .years-card p {
+      margin: 8px 0 0;
+
+      font-size: 13px;
+
+      opacity: 0.55;
+    }
+
+
+    .years-line {
+      width: 100%;
+
+      height: 1px;
+
+      margin: 22px 0 15px;
+
+      background:
+        rgba(255,255,255,0.12);
+    }
+
+    .years-role {
+      font-size: 12px;
+
+      letter-spacing: 1.5px;
+
+      opacity: 0.65;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
 
     .experience-gallery {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+
+      grid-template-columns:
+        repeat(12, 1fr);
+
       grid-auto-rows: 95px;
+
       gap: 24px;
+
       align-items: start;
     }
 
+
+    /* =========================================================
+       EXPERIENCE CARDS
+    ========================================================= */
+
     .experience-card {
       position: relative;
+
       overflow: hidden;
+
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      background:
+        rgba(255,255,255,0.04);
+
+      border:
+        1px solid rgba(255,255,255,0.1);
 
       box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.18);
+        0 20px 60px rgba(0,0,0,0.18);
 
       transition:
         transform 0.5s cubic-bezier(.2,.8,.2,1),
@@ -3399,12 +3641,16 @@ function Home() {
     }
 
     .experience-card:hover {
-      transform: translateY(-14px) rotate(0deg) scale(1.015);
+      transform:
+        translateY(-14px)
+        rotate(0deg)
+        scale(1.015);
 
       box-shadow:
-        0 35px 90px rgba(0, 0, 0, 0.28);
+        0 35px 90px rgba(0,0,0,0.28);
 
-      border-color: rgba(255, 255, 255, 0.25);
+      border-color:
+        rgba(255,255,255,0.25);
 
       z-index: 10;
     }
@@ -3412,7 +3658,9 @@ function Home() {
     .experience-card img {
       width: 100%;
       height: 100%;
+
       display: block;
+
       object-fit: cover;
 
       transition:
@@ -3422,10 +3670,14 @@ function Home() {
 
     .experience-card:hover img {
       transform: scale(1.07);
+
       filter: brightness(0.78);
     }
 
-    /* ================= CARD SIZES ================= */
+
+    /* =========================================================
+       CARD SIZES
+    ========================================================= */
 
     .landscape-card {
       aspect-ratio: 4 / 3;
@@ -3435,74 +3687,78 @@ function Home() {
       aspect-ratio: 3 / 4;
     }
 
-    /* ================= GRID POSITIONS ================= */
+
+    /* =========================================================
+       GRID POSITIONS
+    ========================================================= */
 
     .card-1 {
       grid-column: 1 / 7;
       grid-row: 1 / 5;
+
       transform: rotate(-1deg);
     }
 
     .card-2 {
       grid-column: 7 / 10;
       grid-row: 1 / 5;
+
       transform: rotate(1.5deg);
     }
 
     .card-3 {
       grid-column: 10 / 13;
       grid-row: 1 / 5;
+
       transform: rotate(-1deg);
     }
 
     .card-4 {
       grid-column: 1 / 5;
       grid-row: 5 / 9;
+
       transform: rotate(1.2deg);
     }
 
     .card-5 {
       grid-column: 5 / 10;
       grid-row: 5 / 9;
+
       transform: rotate(-1deg);
     }
 
     .card-6 {
       grid-column: 10 / 13;
       grid-row: 5 / 9;
+
       transform: rotate(1.5deg);
     }
 
-    .card-7 {
-      grid-column: 2 / 6;
-      grid-row: 9 / 14;
-      transform: rotate(-1.5deg);
-    }
 
-    .card-8 {
-      grid-column: 7 / 11;
-      grid-row: 9 / 14;
-      transform: rotate(1deg);
-    }
-
-    /* ================= OVERLAY ================= */
+    /* =========================================================
+       IMAGE OVERLAY
+    ========================================================= */
 
     .experience-overlay {
       position: absolute;
+
       left: 0;
       right: 0;
       bottom: 0;
 
-      padding: 28px 24px 24px;
+      padding:
+        28px 24px 24px;
 
       background:
         linear-gradient(
           to top,
-          rgba(0, 0, 0, 0.82),
-          rgba(0, 0, 0, 0)
+          rgba(0,0,0,0.82),
+          rgba(0,0,0,0)
         );
 
-      transform: translateY(8px);
+      transform:
+        translateY(8px);
+
       opacity: 0.9;
 
       transition:
@@ -3511,24 +3767,179 @@ function Home() {
     }
 
     .experience-card:hover .experience-overlay {
-      transform: translateY(0);
+      transform:
+        translateY(0);
+
       opacity: 1;
     }
 
     .experience-overlay h3 {
       margin: 0 0 6px;
+
       font-size: 19px;
+
       font-weight: 600;
+
       color: #fff;
     }
 
     .experience-overlay p {
       margin: 0;
+
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.72);
+
+      color:
+        rgba(255,255,255,0.72);
     }
 
-    /* ================= TABLET ================= */
+
+    /* =========================================================
+       LEADERSHIP IMPACT
+    ========================================================= */
+
+    .leadership-impact {
+      margin-top: 90px;
+
+      display: grid;
+
+      grid-template-columns:
+        0.8fr
+        1.7fr;
+
+      gap: 70px;
+
+      align-items: start;
+
+      padding-top: 65px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.1);
+    }
+
+
+    .impact-heading span {
+      display: inline-block;
+
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      font-weight: 700;
+
+      opacity: 0.5;
+
+      margin-bottom: 15px;
+    }
+
+    .impact-heading h3 {
+      margin: 0;
+
+      font-size:
+        clamp(28px, 3vw, 42px);
+
+      line-height: 1.1;
+
+      font-weight: 500;
+
+      letter-spacing: -1.5px;
+    }
+
+    .impact-heading h3 strong {
+      opacity: 0.45;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+       IMPACT CARDS
+    ========================================================= */
+
+    .impact-cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .impact-card {
+      display: flex;
+
+      gap: 18px;
+
+      padding: 24px;
+
+      border-radius: 20px;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+    }
+
+    .impact-card:hover {
+      transform: translateY(-7px);
+
+      background:
+        rgba(255,255,255,0.065);
+
+      border-color:
+        rgba(255,255,255,0.18);
+    }
+
+
+    .impact-icon {
+      min-width: 42px;
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255,255,255,0.14);
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+
+      opacity: 0.6;
+    }
+
+
+    .impact-card h4 {
+      margin: 2px 0 8px;
+
+      font-size: 16px;
+
+      font-weight: 600;
+    }
+
+    .impact-card p {
+      margin: 0;
+
+      font-size: 12px;
+
+      line-height: 1.65;
+
+      opacity: 0.55;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
 
     @media (max-width: 1000px) {
 
@@ -3536,14 +3947,28 @@ function Home() {
         padding: 90px 5%;
       }
 
+      .experience-top {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+      .years-card {
+        max-width: 500px;
+      }
+
       .experience-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
+
         grid-auto-rows: auto;
+
         gap: 22px;
       }
 
       .experience-card {
         grid-column: auto !important;
+
         grid-row: auto !important;
       }
 
@@ -3558,22 +3983,28 @@ function Home() {
       .card-1,
       .card-3,
       .card-5 {
-        transform: rotate(-1deg);
+        transform:
+          rotate(-1deg);
       }
 
       .card-2,
       .card-4,
-      .card-6,
-      .card-8 {
-        transform: rotate(1deg);
+      .card-6 {
+        transform:
+          rotate(1deg);
       }
 
-      .card-7 {
-        transform: rotate(-1deg);
+      .leadership-impact {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
       }
     }
 
-    /* ================= MOBILE ================= */
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 650px) {
 
@@ -3581,27 +4012,53 @@ function Home() {
         padding: 75px 20px;
       }
 
-      .experience-heading {
-        margin-bottom: 45px;
+      .experience-top {
+        gap: 35px;
+
+        margin-bottom: 50px;
       }
 
       .experience-heading h2 {
         font-size: 42px;
+
+        letter-spacing: -1.5px;
       }
 
       .experience-heading p {
         font-size: 14px;
+
         line-height: 1.7;
       }
 
+
+      /* YEARS CARD */
+
+      .years-card {
+        min-height: 250px;
+
+        padding: 25px;
+
+        border-radius: 24px;
+      }
+
+      .years-number {
+        font-size: 82px;
+      }
+
+
+      /* GALLERY */
+
       .experience-gallery {
         grid-template-columns: 1fr;
+
         gap: 28px;
       }
 
       .experience-card {
         width: 100%;
+
         grid-column: auto !important;
+
         grid-row: auto !important;
       }
 
@@ -3614,11 +4071,41 @@ function Home() {
       }
 
       .experience-card:hover {
-        transform: translateY(-8px) scale(1.01);
+        transform:
+          translateY(-8px)
+          scale(1.01);
+      }
+
+
+      /* IMPACT */
+
+      .leadership-impact {
+        margin-top: 65px;
+
+        padding-top: 45px;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .impact-heading h3 {
+        font-size: 32px;
+      }
+
+      .impact-cards {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+      }
+
+      .impact-card {
+        padding: 20px;
       }
 
       .experience-overlay {
-        padding: 22px 18px 18px;
+        padding:
+          22px 18px 18px;
       }
 
       .experience-overlay h3 {
@@ -3628,10 +4115,12 @@ function Home() {
       .experience-overlay p {
         font-size: 12px;
       }
+
     }
 
   `}</style>
         </section>
+        {/* </section> */}
 
         <section
           id="projects"
