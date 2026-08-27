@@ -2232,7 +2232,7 @@ function Home() {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
+      
     }
 
     .management-badge {
@@ -3204,7 +3204,7 @@ function Home() {
                 </h2>
 
                 <p>
-                  My journey as a Head Student Volunteer in the Training and
+                  My journey as a Head Student Co-Ordinator in the Training and
                   Placement Department, working with students, faculty and
                   placement teams while taking responsibility for coordination,
                   leadership and event management.
@@ -3236,7 +3236,7 @@ function Home() {
                 <div className="years-line"></div>
 
                 <span className="years-role">
-                  Head Student Volunteer
+                  Head Student Co-Ordinator
                 </span>
 
               </div>
@@ -3268,19 +3268,19 @@ function Home() {
               <div className="experience-card portrait-card card-2">
 
                 <img
-                  src="src/assets/gallery/IMG-20260610-WA0106.jpg"
+                  src="src/assets/gallery/nn.jpeg"
                   alt="Award and Certificate"
                 />
 
                 <div className="experience-overlay">
-                  <h3>Recognition</h3>
+                  <h3>Achievement</h3>
                   <p>Certificate & Award</p>
                 </div>
 
               </div>
 
 
-              {/* Landscape Photo */}
+              {/* Landscape Photo
               <div className="experience-card landscape-card card-3">
 
                 <img
@@ -3293,7 +3293,7 @@ function Home() {
                   <p>Leadership & Teamwork</p>
                 </div>
 
-              </div>
+              </div> */}
 
 
               {/* Landscape Photo */}
@@ -3324,7 +3324,7 @@ function Home() {
 
                 <div className="experience-overlay">
                   <h3>Placement Team</h3>
-                  <p>Training & Placement Activities</p>
+                  <p>Training & Placement Cell</p>
                 </div>
 
               </div>
@@ -3340,7 +3340,7 @@ function Home() {
 
                 <div className="experience-overlay">
                   <h3>Achievement</h3>
-                  <p>Head Student Volunteer</p>
+                  <p>Head Student Co-Ordinator</p>
                 </div>
 
               </div>
@@ -3556,7 +3556,7 @@ function Home() {
     .years-title {
       margin-top: 15px;
 
-      font-size: 14px;
+      font-size: 25px;
 
       letter-spacing: 2.5px;
 
@@ -3584,7 +3584,7 @@ function Home() {
     }
 
     .years-role {
-      font-size: 12px;
+      font-size: 20px;
 
       letter-spacing: 1.5px;
 
