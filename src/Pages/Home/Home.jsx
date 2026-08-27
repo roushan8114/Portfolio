@@ -3205,7 +3205,7 @@ function Home() {
 
                 <p>
                   My journey as a Head Student Co-Ordinator in the Training and
-                  Placement Department, working with students, faculty and
+                  Placement Department of Radharaman Group Of Institutions,Bhopal working with students, faculty and
                   placement teams while taking responsibility for coordination,
                   leadership and event management.
                 </p>
@@ -3230,7 +3230,7 @@ function Home() {
                 </div>
 
                 <p>
-                  Training & Placement Department
+                  Training & Placement Department of Radharaman Group Of Institutions,Bhopal
                 </p>
 
                 <div className="years-line"></div>
