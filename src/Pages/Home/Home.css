@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+
 .page {
   position: relative;
   width: 100%;
@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 
-/* ===== Custom cursor ===== */
+
 .cursor-dot {
   pointer-events: none;
   position: fixed;
@@ -162,7 +162,7 @@
   height: 20px;
 }
 
-/* corners grow slightly when their parent card is hovered */
+
 .skill-card:hover .corner-tl,
 .project-card:hover .corner-tl,
 .hero-photo:hover .corner-tl,
@@ -178,7 +178,7 @@
   height: 32px;
 }
 
-/* ===== Hero ===== */
+
 .hero {
   position: relative;
   width: 100%;
@@ -285,9 +285,7 @@
   color: #71717a;
 }
 
-/* NOTE: no static opacity:0 here anymore — the animation itself (with
-   fill-mode: backwards) handles the entrance, so the element can never
-   get stuck invisible if the animation is interrupted (HMR, slow tab, etc). */
+
 .hero-bio {
   margin-top: 24px;
   color: #a1a1aa;
@@ -418,7 +416,7 @@
   transform: scale(1.08);
 }
 
-/* ===== Generic section layout ===== */
+
 .section {
   position: relative;
   width: 100%;
@@ -551,7 +549,7 @@
   line-height: 1.7;
 }
 
-/* ===== Skills ===== */
+
 .skills-grid {
   margin-top: 32px;
   display: grid;
@@ -618,7 +616,7 @@
   transform: translateX(3px);
 }
 
-/* ===== Projects ===== */
+
 .projects-grid {
   margin-top: 40px;
   display: grid;
@@ -960,7 +958,6 @@
   transform: scale(1);
 }
 
-/* ===== Animations ===== */
 @keyframes fadeUp {
   from {
     opacity: 0;

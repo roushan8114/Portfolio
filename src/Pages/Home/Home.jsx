@@ -1262,9 +1262,6 @@ function Home() {
       font-size: 15px;
     }
 
-
-   
-
     .about-grid {
       margin-top: 55px;
 
@@ -1355,8 +1352,6 @@ function Home() {
       font-size: 13px;
     }
 
-
-
     .skills-grid {
       margin-top: 55px;
 
@@ -1422,8 +1417,6 @@ function Home() {
       line-height: 1.75;
     }
 
-
-
     .technology-wrapper {
       margin-top: 40px;
 
@@ -1482,9 +1475,6 @@ function Home() {
       background:
         rgba(255,255,255,0.025);
     }
-
-
- 
 
     .timeline {
       margin-top: 60px;
@@ -1729,9 +1719,6 @@ function Home() {
       background:
         rgba(139,92,246,0.1);
     }
-
-
-   
 
     .achievements-grid {
       margin-top: 55px;
@@ -2036,9 +2023,6 @@ function Home() {
       flex-wrap: wrap;
     }
 
-
-
-
     .footer {
       padding:
         35px
@@ -2054,8 +2038,6 @@ function Home() {
 
       font-size: 11px;
     }
-
-
 
     @media (max-width: 900px) {
 
@@ -2093,8 +2075,6 @@ function Home() {
         grid-template-columns: 1fr;
       }
     }
-
-
 
     @media (max-width: 700px) {
 
@@ -2207,11 +2187,6 @@ function Home() {
           18px;
       }
     }
-
-
-    /* =========================================================
-       MANAGEMENT & LEADERSHIP
-    ========================================================= */
 
     .management-card {
       margin-top: 45px;
@@ -2461,7 +2436,6 @@ function Home() {
 
 
 
-
   const scrollToSection = (id) => {
     document
       .getElementById(id)
@@ -2479,11 +2453,7 @@ function Home() {
 
       <div className="portfolio">
 
-
-
         <div className="noise" />
-
-
 
         <motion.div
           className="mouse-glow"
@@ -2497,8 +2467,6 @@ function Home() {
             damping: 18,
           }}
         />
-
-
 
         <header className="navbar">
 
@@ -2515,7 +2483,6 @@ function Home() {
               <span>/&gt;</span>
             </button>
 
-
             <button
               className="mobile-menu"
               onClick={() =>
@@ -2524,7 +2491,6 @@ function Home() {
             >
               ☰
             </button>
-
 
             <nav
               className={`nav-links ${menuOpen ? "open" : ""
@@ -2554,8 +2520,6 @@ function Home() {
                     item.slice(1)}
                 </button>
               ))}
-
-
               <a
                 href="https://drive.google.com/file/d/1U2DW5YY9ZGBqn2ZuS0IyyjVxeJuISWV_/view?usp=drive_link"
                 target="_blank"
@@ -2570,7 +2534,6 @@ function Home() {
           </div>
 
         </header>
-
 
         <section
           id="home"
@@ -2594,9 +2557,6 @@ function Home() {
             />
 
           </div>
-
-
-
           <motion.div
             className="hero-orb orb-one"
             animate={{
@@ -2610,8 +2570,6 @@ function Home() {
               ease: "easeInOut",
             }}
           />
-
-
           <motion.div
             className="hero-orb orb-two"
             animate={{
@@ -2625,15 +2583,9 @@ function Home() {
               ease: "easeInOut",
             }}
           />
-
-
           <div className="hero-container">
-
-
             <Reveal>
-
               <div>
-
                 <motion.div
                   className="availability"
                   initial={{
@@ -2648,14 +2600,11 @@ function Home() {
                     duration: 0.7,
                   }}
                 >
-
                   <span className="availability-dot" />
 
                   Available for opportunities
 
                 </motion.div>
-
-
                 <motion.h1
                   className="hero-title"
                   initial={{
@@ -2670,17 +2619,12 @@ function Home() {
                     duration: 1,
                   }}
                 >
-
                   Hi, I'm
-
                   <br />
-
                   <span className="gradient-text">
                     Roushan Kumar
                   </span>
-
                 </motion.h1>
-
 
                 <motion.div
                   className="role-text"
@@ -2701,14 +2645,9 @@ function Home() {
                   <i className="role-slash">
                     //{" "}
                   </i>
-
                   {role}
-
                   <span className="cursor" />
-
                 </motion.div>
-
-
                 <motion.p
                   className="hero-description"
                   initial={{
@@ -2724,20 +2663,14 @@ function Home() {
                     duration: 0.8,
                   }}
                 >
-
                   I build{" "}
-
                   <strong>
                     modern, responsive and scalable web applications
                   </strong>{" "}
-
                   using Python, Django, React.js, REST APIs
                   and MySQL — turning ideas into real digital
                   products.
-
                 </motion.p>
-
-
                 <motion.div
                   className="button-row"
                   initial={{
@@ -2777,15 +2710,9 @@ function Home() {
                   </button>
 
                 </motion.div>
-
               </div>
-
             </Reveal>
-
-
-
             <Reveal delay={0.2}>
-
               <motion.div
                 className="profile-container"
 
@@ -2800,7 +2727,6 @@ function Home() {
                   ease: "easeInOut",
                 }}
               >
-
                 <div className="profile-ring" />
 
                 <div className="profile-ring-two" />
@@ -2841,8 +2767,6 @@ function Home() {
 
         </section>
 
-
-
         <div className="stats">
 
           <div className="stat">
@@ -2857,7 +2781,6 @@ function Home() {
 
           </div>
 
-
           <div className="stat">
 
             <div className="stat-number">
@@ -2870,7 +2793,6 @@ function Home() {
 
           </div>
 
-
           <div className="stat">
 
             <div className="stat-number">
@@ -2880,22 +2802,15 @@ function Home() {
             <div className="stat-label">
               Featured Projects
             </div>
-
           </div>
-
         </div>
-
-
 
         <section
           id="about"
           className="section"
         >
-
           <div className="container">
-
             <Reveal>
-
               <div className="section-tag">
                 01 — ABOUT ME
               </div>
@@ -2905,17 +2820,13 @@ function Home() {
                 <br />
                 the code.
               </h2>
-
               <p className="section-description">
                 I'm a Full Stack Developer who enjoys
                 taking an idea from a blank screen to a
                 complete, usable product — frontend,
                 backend, database and deployment.
               </p>
-
             </Reveal>
-
-
             <div className="about-grid">
 
               <Reveal delay={0.1}>
@@ -2941,12 +2852,9 @@ function Home() {
                   </div>
 
                 </TiltCard>
-
               </Reveal>
 
-
               <Reveal delay={0.2}>
-
                 <TiltCard className="glass-card">
 
                   <h3>
@@ -2969,22 +2877,15 @@ function Home() {
                 </TiltCard>
 
               </Reveal>
-
             </div>
-
           </div>
-
         </section>
-
-
 
         <section
           id="skills"
           className="section"
         >
-
           <div className="container">
-
             <Reveal>
 
               <div className="section-tag">
@@ -3001,10 +2902,7 @@ function Home() {
                 The technologies I use to design,
                 develop and ship modern web applications.
               </p>
-
             </Reveal>
-
-
             <div className="skills-grid">
 
               {skills.map(
@@ -3016,9 +2914,7 @@ function Home() {
                       index * 0.08
                     }
                   >
-
                     <TiltCard className="skill-card">
-
                       <motion.div
                         className="skill-icon"
 
@@ -3048,27 +2944,18 @@ function Home() {
                       >
                         {skill.icon}
                       </motion.div>
-
-
                       <h3>
                         {skill.title}
                       </h3>
-
-
                       <p>
                         {skill.text}
                       </p>
-
                     </TiltCard>
-
                   </Reveal>
 
                 )
               )}
-
             </div>
-
-
 
             <Reveal delay={0.2}>
 
@@ -3101,16 +2988,12 @@ function Home() {
             </Reveal>
 
           </div>
-
         </section>
-
-
 
         <section
           id="experience"
           className="section"
         >
-
           <div className="container">
 
             <Reveal>
@@ -3147,25 +3030,16 @@ function Home() {
                         x: 8,
                       }}
                     >
-
                       <span className="timeline-dot" />
-
-
                       <div className="experience-year">
                         {item.year}
                       </div>
-
-
                       <h3>
                         {item.title}
                       </h3>
-
-
                       <div className="experience-company">
                         {item.company}
                       </div>
-
-
                       <p>
                         {item.description}
                       </p>
@@ -3176,25 +3050,16 @@ function Home() {
 
                 )
               )}
-
             </div>
-
           </div>
-
         </section>
-
-
-
-
 
         <section className="experience-section" id="experience">
           <div className="experience-container">
 
-            {/* ================= TOP CONTENT ================= */}
-
             <div className="experience-top">
 
-              {/* LEFT - HEADING */}
+
               <div className="experience-heading">
                 <span className="section-small-title">EXPERIENCE</span>
 
@@ -3211,8 +3076,6 @@ function Home() {
                 </p>
               </div>
 
-
-              {/* RIGHT - EXPERIENCE HIGHLIGHT */}
               <div className="years-card">
 
                 <div className="years-top">
@@ -3243,12 +3106,7 @@ function Home() {
 
             </div>
 
-
-            {/* ================= FLOATING PHOTOS ================= */}
-
             <div className="experience-gallery">
-
-              {/* Landscape Photo */}
               <div className="experience-card landscape-card card-1">
 
                 <img
@@ -3262,9 +3120,6 @@ function Home() {
                 </div>
 
               </div>
-
-
-              {/* Portrait Photo */}
               <div className="experience-card portrait-card card-2">
 
                 <img
@@ -3280,7 +3135,7 @@ function Home() {
               </div>
 
 
-              {/* Landscape Photo
+              {/* 
               <div className="experience-card landscape-card card-3">
 
                 <img
@@ -3296,25 +3151,21 @@ function Home() {
               </div> */}
 
 
-              {/* Landscape Photo */}
-              {/* 
-      <div className="experience-card landscape-card card-4">
 
-        <img
-          src="src/assets/gallery/IMG-20260610-WA0059.jpg"
-          alt="Leadership Moment"
-        />
+              {/* <div className="experience-card landscape-card card-4">
 
-        <div className="experience-overlay">
-          <h3>Leadership</h3>
-          <p>Working with the Team</p>
-        </div>
+                <img
+                  src="src/assets/gallery/IMG-20260610-WA0059.jpg"
+                  alt="Leadership Moment"
+                />
 
-      </div>
-      */}
+                <div className="experience-overlay">
+                  <h3>Leadership</h3>
+                  <p>Working with the Team</p>
+                </div>
 
+              </div> */}
 
-              {/* Landscape Photo */}
               <div className="experience-card landscape-card card-5">
 
                 <img
@@ -3329,8 +3180,6 @@ function Home() {
 
               </div>
 
-
-              {/* Portrait Photo */}
               <div className="experience-card portrait-card card-6">
 
                 <img
@@ -3347,9 +3196,7 @@ function Home() {
             </div>
           </div>
           <style>{`
-    /* =========================================================
-       EXPERIENCE SECTION
-    ========================================================= */
+ 
 
     .experience-section {
       width: 100%;
@@ -3364,10 +3211,7 @@ function Home() {
     }
 
 
-    /* =========================================================
-       TOP SECTION
-    ========================================================= */
-
+    
     .experience-top {
       display: grid;
 
@@ -3381,11 +3225,6 @@ function Home() {
 
       margin-bottom: 75px;
     }
-
-
-    /* =========================================================
-       HEADING
-    ========================================================= */
 
     .experience-heading {
       max-width: 850px;
@@ -3433,10 +3272,6 @@ function Home() {
       margin: 0;
     }
 
-
-    /* =========================================================
-       3+ YEARS CARD
-    ========================================================= */
 
     .years-card {
       position: relative;
@@ -3594,9 +3429,7 @@ function Home() {
     }
 
 
-    /* =========================================================
-       GALLERY
-    ========================================================= */
+   
 
     .experience-gallery {
       display: grid;
@@ -3610,11 +3443,6 @@ function Home() {
 
       align-items: start;
     }
-
-
-    /* =========================================================
-       EXPERIENCE CARDS
-    ========================================================= */
 
     .experience-card {
       position: relative;
@@ -3675,10 +3503,7 @@ function Home() {
     }
 
 
-    /* =========================================================
-       CARD SIZES
-    ========================================================= */
-
+    
     .landscape-card {
       aspect-ratio: 4 / 3;
     }
@@ -3687,10 +3512,6 @@ function Home() {
       aspect-ratio: 3 / 4;
     }
 
-
-    /* =========================================================
-       GRID POSITIONS
-    ========================================================= */
 
     .card-1 {
       grid-column: 1 / 7;
@@ -3734,10 +3555,6 @@ function Home() {
       transform: rotate(1.5deg);
     }
 
-
-    /* =========================================================
-       IMAGE OVERLAY
-    ========================================================= */
 
     .experience-overlay {
       position: absolute;
@@ -3793,9 +3610,6 @@ function Home() {
     }
 
 
-    /* =========================================================
-       LEADERSHIP IMPACT
-    ========================================================= */
 
     .leadership-impact {
       margin-top: 90px;
@@ -3849,11 +3663,6 @@ function Home() {
 
       font-weight: 500;
     }
-
-
-    /* =========================================================
-       IMPACT CARDS
-    ========================================================= */
 
     .impact-cards {
       display: grid;
@@ -3936,11 +3745,6 @@ function Home() {
       opacity: 0.55;
     }
 
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
-
     @media (max-width: 1000px) {
 
       .experience-section {
@@ -4002,10 +3806,6 @@ function Home() {
     }
 
 
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
     @media (max-width: 650px) {
 
       .experience-section {
@@ -4031,8 +3831,6 @@ function Home() {
       }
 
 
-      /* YEARS CARD */
-
       .years-card {
         min-height: 250px;
 
@@ -4045,8 +3843,6 @@ function Home() {
         font-size: 82px;
       }
 
-
-      /* GALLERY */
 
       .experience-gallery {
         grid-template-columns: 1fr;
@@ -4075,9 +3871,6 @@ function Home() {
           translateY(-8px)
           scale(1.01);
       }
-
-
-      /* IMPACT */
 
       .leadership-impact {
         margin-top: 65px;
@@ -4347,9 +4140,6 @@ function Home() {
 
         </section>
 
-
-
-
         <section
           id="gallery"
           className="section"
@@ -4386,8 +4176,6 @@ function Home() {
 
         </section>
 
-
-
         <section
           id="contact"
           className="section"
@@ -4416,8 +4204,6 @@ function Home() {
                     <br />
                     something great.
                   </h2>
-
-
                   <p className="contact-description">
                     I'm open to exciting opportunities,
                     freelance projects and collaborations.
