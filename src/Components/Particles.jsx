@@ -26,7 +26,7 @@ const vertex = /* glsl */ `
   uniform mat4 modelMatrix;
   uniform mat4 viewMatrix;
   uniform mat4 projectionMatrix;
-  uniform float uTime;
+  uniform float uTime;2
   uniform float uSpread;
   uniform float uBaseSize;
   uniform float uSizeRandomness;

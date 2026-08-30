@@ -9,7 +9,6 @@ import {
 import Particles from "../../Components/Particles";
 import profilePic from "../../assets/profilepic.png";
 
-
 import galleryPhoto1 from "../../assets/gallery/DSC_0368.JPG";
 import galleryPhoto2 from "../../assets/gallery/DSC_0369.JPG";
 import galleryPhoto3 from "../../assets/gallery/IMG-20240313-WA0503.jpg";
@@ -24,8 +23,9 @@ import galleryPhoto11 from "../../assets/gallery/photo2.png";
 import galleryPhoto12 from "../../assets/gallery/photo3.jpg";
 import galleryPhoto13 from "../../assets/gallery/photo4.jpg";
 
-
-
+import academicPhoto1 from "../../assets/gallery/Anchoring AWARD.jpg";
+import academicPhoto2 from "../../assets/gallery/IMG20250308165305.jpg";
+import academicPhoto3 from "../../assets/gallery/ANIL3491.JPG";
 
 const roles = [
   "Full Stack Developer",
@@ -168,16 +168,19 @@ const achievements = [
     year: "2nd Year",
     title: "Academic Award Winner",
     text: "Recognized for outstanding academic performance in 2nd year.",
+    image: academicPhoto1,
   },
   {
     year: "3rd Year",
     title: "Academic Award Winner",
     text: "Recognized for outstanding academic performance in 3rd year.",
+    image: academicPhoto2,
   },
   {
     year: "Final Year",
     title: "Academic Award Winner",
     text: "Recognized for outstanding academic performance in final year.",
+    image: academicPhoto3,
   },
 ];
 
@@ -2991,6 +2994,764 @@ function Home() {
         </section>
 
         <section
+          id="achievements"
+          className="section academic-section"
+        >
+          <div className="container">
+
+            {/* ================= HEADER ================= */}
+
+            <div className="academic-header">
+
+              <div className="academic-heading">
+
+                <div className="section-tag">
+                  05 — ACHIEVEMENTS
+                </div>
+
+                <h2 className="section-title">
+                  3x Academic
+                  <br />
+                  <span>Award Winner.</span>
+                </h2>
+
+                <p className="section-description">
+                  Recognized with academic excellence awards
+                  across three consecutive years of college.
+                </p>
+
+              </div>
+
+
+              {/* BIG 3X NUMBER */}
+
+              <div className="academic-highlight">
+
+                <div className="academic-big-number">
+                  3
+                </div>
+
+                <div className="academic-highlight-text">
+                  <strong>YEARS</strong>
+                  <span>ACADEMIC<br />EXCELLENCE</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* ================= ACADEMIC PHOTO GALLERY ================= */}
+
+            <div className="academic-gallery">
+
+              {achievements.map((item, index) => (
+
+                <Reveal
+                  key={item.year}
+                  delay={index * 0.12}
+                >
+
+                  <TiltCard className="academic-card">
+
+                    {/* PHOTO */}
+
+                    <div className="academic-image-wrapper">
+
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="academic-image"
+                      />
+
+                      <div className="academic-image-overlay" />
+
+                      <div className="academic-award-icon">
+                        🏆
+                      </div>
+
+                      <div className="academic-photo-number">
+                        0{index + 1}
+                      </div>
+
+                    </div>
+
+
+                    {/* CONTENT */}
+
+                    <div className="academic-content">
+
+                      <div className="academic-year">
+                        {item.year}
+                      </div>
+
+                      <h3>
+                        {item.title}
+                      </h3>
+
+                      <p>
+                        {item.text}
+                      </p>
+
+                    </div>
+
+                  </TiltCard>
+
+                </Reveal>
+
+              ))}
+
+            </div>
+
+
+            {/* ================= BOTTOM ACHIEVEMENT STRIP ================= */}
+
+            <Reveal delay={0.35}>
+
+              <div className="academic-bottom">
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-number">
+                    3
+                  </span>
+
+                  <span>
+                    Consecutive<br />
+                    Academic Years
+                  </span>
+
+                </div>
+
+
+                <div className="academic-divider" />
+
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-icon">
+                    ✦
+                  </span>
+
+                  <span>
+                    Consistent<br />
+                    Academic Excellence
+                  </span>
+
+                </div>
+
+
+                <div className="academic-divider" />
+
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-icon">
+                    🏆
+                  </span>
+
+                  <span>
+                    Awarded for<br />
+                    Outstanding Performance
+                  </span>
+
+                </div>
+
+              </div>
+
+            </Reveal>
+
+          </div>
+
+
+          {/* ================= ACADEMIC CSS ================= */}
+
+          <style>{`
+
+    /* =========================================
+       ACADEMIC SECTION
+    ========================================= */
+
+    .academic-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .academic-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 55px;
+    }
+
+
+    .academic-heading {
+      max-width: 760px;
+    }
+
+
+    .academic-heading .section-tag {
+      margin-bottom: 18px;
+    }
+
+
+    .academic-heading .section-title {
+      margin-bottom: 22px;
+    }
+
+
+    .academic-heading .section-description {
+      max-width: 650px;
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================
+       BIG 3X HIGHLIGHT
+    ========================================= */
+
+    .academic-highlight {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      min-width: 210px;
+
+      padding: 18px 24px;
+
+      border-radius: 22px;
+
+      border: 1px solid
+        rgba(255,255,255,0.09);
+
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(139,92,246,0.18),
+          transparent 60%
+        ),
+        rgba(255,255,255,0.025);
+
+      backdrop-filter: blur(14px);
+
+      transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+
+    .academic-highlight:hover {
+      transform: translateY(-6px);
+
+      border-color:
+        rgba(139,92,246,0.45);
+
+      box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.2);
+    }
+
+
+    .academic-big-number {
+      font-size: 76px;
+      line-height: 0.8;
+      font-weight: 800;
+
+      letter-spacing: -5px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #8b5cf6
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+    .academic-highlight-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+
+    .academic-highlight-text strong {
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #8b5cf6;
+    }
+
+
+    .academic-highlight-text span {
+      font-size: 11px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      opacity: 0.55;
+    }
+
+
+    /* =========================================
+       PHOTO GRID
+    ========================================= */
+
+    .academic-gallery {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+
+      align-items: stretch;
+    }
+
+
+    /* =========================================
+       CARD
+    ========================================= */
+
+    .academic-card {
+      position: relative;
+
+      height: 100%;
+
+      overflow: hidden;
+
+      padding: 0 !important;
+
+      border-radius: 24px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+      background:
+        rgba(255,255,255,0.025);
+
+      box-shadow:
+        0 20px 70px
+        rgba(0,0,0,0.18);
+
+      transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+    }
+
+
+    .academic-card:hover {
+      transform:
+        translateY(-12px)
+        scale(1.015);
+
+      border-color:
+        rgba(139,92,246,0.35);
+
+      box-shadow:
+        0 35px 90px
+        rgba(0,0,0,0.3);
+    }
+
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .academic-image-wrapper {
+      position: relative;
+
+      width: 100%;
+
+      height: 330px;
+
+      overflow: hidden;
+    }
+
+
+    .academic-image {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.8s
+        cubic-bezier(.2,.8,.2,1),
+        filter 0.5s ease;
+    }
+
+
+    .academic-card:hover
+    .academic-image {
+      transform: scale(1.08);
+
+      filter: brightness(0.72);
+    }
+
+
+    /* =========================================
+       IMAGE GRADIENT
+    ========================================= */
+
+    .academic-image-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.05),
+          transparent 45%,
+          rgba(0,0,0,0.78)
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================
+       TROPHY
+    ========================================= */
+
+    .academic-award-icon {
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      font-size: 21px;
+
+      background:
+        rgba(0,0,0,0.48);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+      backdrop-filter: blur(10px);
+
+      transition:
+        transform 0.4s ease;
+    }
+
+
+    .academic-card:hover
+    .academic-award-icon {
+      transform:
+        rotate(-8deg)
+        scale(1.1);
+    }
+
+
+    /* =========================================
+       PHOTO NUMBER
+    ========================================= */
+
+    .academic-photo-number {
+      position: absolute;
+
+      top: 20px;
+      right: 20px;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      color:
+        rgba(255,255,255,0.7);
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================
+       CONTENT
+    ========================================= */
+
+    .academic-content {
+      padding: 24px 25px 27px;
+    }
+
+
+    .academic-year {
+      color: #8b5cf6;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+
+    .academic-content h3 {
+      margin: 0 0 10px;
+
+      font-size: 20px;
+
+      font-weight: 650;
+
+      letter-spacing: -0.3px;
+    }
+
+
+    .academic-content p {
+      margin: 0;
+
+      color: #85858f;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       BOTTOM STRIP
+    ========================================= */
+
+    .academic-bottom {
+      margin-top: 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr auto 1fr auto 1fr;
+
+      align-items: center;
+
+      gap: 25px;
+
+      padding: 24px 30px;
+
+      border-radius: 22px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(139,92,246,0.07),
+          rgba(255,255,255,0.025),
+          rgba(139,92,246,0.07)
+        );
+    }
+
+
+    .academic-bottom-item {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 13px;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+      letter-spacing: 0.5px;
+
+      text-transform: uppercase;
+
+      opacity: 0.65;
+    }
+
+
+    .academic-bottom-number {
+      font-size: 34px;
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      color: #8b5cf6;
+    }
+
+
+    .academic-bottom-icon {
+      font-size: 24px;
+    }
+
+
+    .academic-divider {
+      width: 1px;
+
+      height: 38px;
+
+      background:
+        rgba(255,255,255,0.1);
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .academic-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+
+      .academic-highlight {
+        align-self: flex-start;
+      }
+
+
+      .academic-gallery {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .academic-card:last-child {
+        grid-column: 1 / -1;
+
+        max-width: calc(50% - 11px);
+
+        margin: 0 auto;
+
+        width: 100%;
+      }
+
+
+      .academic-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+
+      .academic-divider {
+        width: 70px;
+        height: 1px;
+
+        margin: 0 auto;
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+      .academic-header {
+        margin-bottom: 40px;
+      }
+
+
+      .academic-heading .section-title {
+        font-size: 42px;
+      }
+
+
+      .academic-highlight {
+        width: 100%;
+
+        min-width: 0;
+      }
+
+
+      .academic-big-number {
+        font-size: 64px;
+      }
+
+
+      .academic-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+      }
+
+
+      .academic-card:last-child {
+        grid-column: auto;
+
+        max-width: none;
+
+        margin: 0;
+      }
+
+
+      .academic-image-wrapper {
+        height: 300px;
+      }
+
+
+      .academic-content {
+        padding: 21px;
+      }
+
+
+      .academic-content h3 {
+        font-size: 18px;
+      }
+
+
+      .academic-bottom {
+        padding: 22px 18px;
+      }
+
+    }
+
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+      .academic-heading .section-title {
+        font-size: 36px;
+      }
+
+
+      .academic-image-wrapper {
+        height: 260px;
+      }
+
+    }
+
+  `}</style>
+
+        </section>
+
+        <section
           id="experience"
           className="section"
         >
@@ -4070,7 +4831,7 @@ function Home() {
 
 
 
-        <section
+        {/* <section
           id="achievements"
           className="section"
         >
@@ -4174,7 +4935,7 @@ function Home() {
 
           </div>
 
-        </section>
+        </section> */}
 
         <section
           id="contact"
