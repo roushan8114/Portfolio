@@ -423,7 +423,7 @@ function Home() {
   }, []);
 
   const styles = useMemo(
-  () => `
+    () => `
     
     * {
       box-sizing: border-box;
@@ -2508,948 +2508,948 @@ function Home() {
     }
 
     `,
-  []
-);
+    []
+  );
 
 
 
 
 
-const scrollToSection = (id) => {
-  const element = document.getElementById(id);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
 
-  if (!element) return;
+    if (!element) return;
 
-  const navbar = document.querySelector(".navbar");
-  const navbarHeight = navbar?.getBoundingClientRect().height || 80;
+    const navbar = document.querySelector(".navbar");
+    const navbarHeight = navbar?.getBoundingClientRect().height || 80;
 
-  const targetTop =
-    element.getBoundingClientRect().top +
-    window.pageYOffset -
-    navbarHeight -
-    12;
+    const targetTop =
+      element.getBoundingClientRect().top +
+      window.pageYOffset -
+      navbarHeight -
+      12;
 
-  window.scrollTo({
-    top: Math.max(0, targetTop),
-    behavior: "smooth",
-  });
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: "smooth",
+    });
 
-  setMenuOpen(false);
-};
+    setMenuOpen(false);
+  };
 
-return (
-  <>
-    <style>{styles}</style>
+  return (
+    <>
+      <style>{styles}</style>
 
-    <div className="portfolio">
-      <div className="noise" />
+      <div className="portfolio">
+        <div className="noise" />
 
-      <motion.div
-        className="mouse-glow"
-        animate={{
-          x: mousePosition.x,
-          y: mousePosition.y,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 60,
-          damping: 18,
-        }}
-      />
+        <motion.div
+          className="mouse-glow"
+          animate={{
+            x: mousePosition.x,
+            y: mousePosition.y,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 18,
+          }}
+        />
 
-      <header className="navbar">
-        <div className="navbar-inner">
+        <header className="navbar">
+          <div className="navbar-inner">
 
 
-          <button
-            className="mobile-menu"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation"
-          >
-            ☰
-          </button>
-
-          <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-            {[
-              ["home", "Name"],
-              ["about", "About"],
-              ["skills", "Tech Skills"],
-              ["experience", "Experience Journey"],
-              ["projects", "Projects"],
-              ["achievements", "Academic Awards"],
-              ["leadership", "Leadership"],
-              ["certification", "Certification"],
-              ["gallery", "Moments"],
-              ["contact", "Get in Touch"],
-            ].map(([id, label]) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-              >
-                {label}
-              </button>
-            ))}
-
-            <a
-              href="https://drive.google.com/file/d/1U2DW5YY9ZGBqn2ZuS0IyyjVxeJuISWV_/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
-              className="resume-btn"
+            <button
+              className="mobile-menu"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle navigation"
             >
-              Resume ↗
-            </a>
-          </nav>
-        </div>
-      </header>
+              ☰
+            </button>
 
-      <section
-        id="home"
-        className="hero"
-      >
+            <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+              {[
+                ["home", "Name"],
+                ["about", "About"],
+                ["skills", "Tech Skills"],
+                ["experience", "Experience Journey"],
+                ["projects", "Projects"],
+                ["achievements", "Academic Awards"],
+                ["leadership", "Leadership"],
+                ["certification", "Certification"],
+                ["gallery", "Moments"],
+                ["contact", "Get in Touch"],
+              ].map(([id, label]) => (
+                <button
+                  key={id}
+                  onClick={() => scrollToSection(id)}
+                >
+                  {label}
+                </button>
+              ))}
 
-        <div className="particle-background">
+              <a
+                href="https://drive.google.com/file/d/1U2DW5YY9ZGBqn2ZuS0IyyjVxeJuISWV_/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+                className="resume-btn"
+              >
+                Resume ↗
+              </a>
+            </nav>
+          </div>
+        </header>
 
-          <Particles
-            particleColors={[
-              "#ffffff",
-              "#8b5cf6",
-              "#3b82f6",
-            ]}
-            particleCount={180}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover
-            alphaParticles={false}
+        <section
+          id="home"
+          className="hero"
+        >
+
+          <div className="particle-background">
+
+            <Particles
+              particleColors={[
+                "#ffffff",
+                "#8b5cf6",
+                "#3b82f6",
+              ]}
+              particleCount={180}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={100}
+              moveParticlesOnHover
+              alphaParticles={false}
+            />
+
+          </div>
+          <motion.div
+            className="hero-orb orb-one"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
-
-        </div>
-        <motion.div
-          className="hero-orb orb-one"
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="hero-orb orb-two"
-          animate={{
-            y: [0, 30, 0],
-            x: [0, -20, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <div className="hero-container">
-          <Reveal>
-            <div>
-              <motion.div
-                className="availability"
-                initial={{
-                  opacity: 0,
-                  scale: 0.8,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.7,
-                }}
-              >
-                <span className="availability-dot" />
-
-                Available for opportunities
-
-              </motion.div>
-              <motion.h1
-                className="hero-title"
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 1,
-                }}
-              >
-                Hi, I'm
-                <br />
-                <span className="gradient-text">
-                  Roushan Kumar
-                </span>
-              </motion.h1>
-
-              <motion.div
-                className="role-text"
-                initial={{
-                  opacity: 0,
-                  x: -30,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  delay: 0.4,
-                  duration: 0.8,
-                }}
-              >
-
-                <i className="role-slash">
-                    //{" "}
-                </i>
-                {role}
-                <span className="cursor" />
-              </motion.div>
-              <motion.p
-                className="hero-description"
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  delay: 0.6,
-                  duration: 0.8,
-                }}
-              >
-                I build{" "}
-                <strong>
-                  modern, responsive and scalable web applications
-                </strong>{" "}
-                using Python, Django, React.js, REST APIs
-                and MySQL — turning ideas into real digital
-                products.
-              </motion.p>
-              <motion.div
-                className="button-row"
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  delay: 0.8,
-                }}
-              >
-
-                <button
-                  className="button primary-button"
-                  onClick={() =>
-                    scrollToSection(
-                      "projects"
-                    )
-                  }
+          <motion.div
+            className="hero-orb orb-two"
+            animate={{
+              y: [0, 30, 0],
+              x: [0, -20, 0],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <div className="hero-container">
+            <Reveal>
+              <div>
+                <motion.div
+                  className="availability"
+                  initial={{
+                    opacity: 0,
+                    scale: 0.8,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                  }}
                 >
-                  Explore My Work →
-                </button>
+                  <span className="availability-dot" />
 
+                  Available for opportunities
 
-                <button
-                  className="button secondary-button"
-                  onClick={() =>
-                    scrollToSection(
-                      "contact"
-                    )
-                  }
+                </motion.div>
+                <motion.h1
+                  className="hero-title"
+                  initial={{
+                    opacity: 0,
+                    y: 40,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
-                  Let's Connect
-                </button>
-
-              </motion.div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <motion.div
-              className="profile-container"
-
-              animate={{
-                y: [0, -12, 0],
-                rotate: [0, 0.5, 0],
-              }}
-
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="profile-ring" />
-
-              <div className="profile-ring-two" />
-
-
-              <motion.div
-                className="profile-box"
-                whileHover={{
-                  scale: 1.025,
-                }}
-              >
-
-                <img
-                  src={profilePic}
-                  alt="Roushan Kumar"
-                />
-
-
-                <div className="profile-info">
-
-                  <strong>
+                  Hi, I'm
+                  <br />
+                  <span className="gradient-text">
                     Roushan Kumar
-                  </strong>
+                  </span>
+                </motion.h1>
 
-                  <small>
-                    FULL STACK DEVELOPER
-                  </small>
+                <motion.div
+                  className="role-text"
+                  initial={{
+                    opacity: 0,
+                    x: -30,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    delay: 0.4,
+                    duration: 0.8,
+                  }}
+                >
 
-                </div>
+                  <i className="role-slash">
+                    //{" "}
+                  </i>
+                  {role}
+                  <span className="cursor" />
+                </motion.div>
+                <motion.p
+                  className="hero-description"
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    delay: 0.6,
+                    duration: 0.8,
+                  }}
+                >
+                  I build{" "}
+                  <strong>
+                    modern, responsive and scalable web applications
+                  </strong>{" "}
+                  using Python, Django, React.js, REST APIs
+                  and MySQL — turning ideas into real digital
+                  products.
+                </motion.p>
+                <motion.div
+                  className="button-row"
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    delay: 0.8,
+                  }}
+                >
 
-              </motion.div>
-
-            </motion.div>
-
-          </Reveal>
-
-        </div>
-
-      </section>
-
-      <div className="stats">
-
-        <div className="stat">
-
-          <div className="stat-number">
-            <Counter value={1} />+
-          </div>
-
-          <div className="stat-label">
-            Year+ Development Experience
-          </div>
-
-        </div>
-
-        <div className="stat">
-
-          <div className="stat-number">
-            <Counter value={14} />+
-          </div>
-
-          <div className="stat-label">
-            Technologies & Tools
-          </div>
-
-        </div>
-
-        <div className="stat">
-
-          <div className="stat-number">
-            <Counter value={10} />+
-          </div>
-
-          <div className="stat-label">
-            Featured Projects
-          </div>
-        </div>
-      </div>
+                  <button
+                    className="button primary-button"
+                    onClick={() =>
+                      scrollToSection(
+                        "projects"
+                      )
+                    }
+                  >
+                    Explore My Work →
+                  </button>
 
 
+                  <button
+                    className="button secondary-button"
+                    onClick={() =>
+                      scrollToSection(
+                        "contact"
+                      )
+                    }
+                  >
+                    Let's Connect
+                  </button>
 
-      <section
-        id="about"
-        className="section"
-      >
-        <div className="container">
-          <Reveal>
-            <div className="section-tag">
-              02 — ABOUT ME
-            </div>
-
-            <h2 className="section-title">
-              The person behind
-              <br />
-              the code.
-            </h2>
-            <p className="section-description">
-              I'm a Full Stack Developer who enjoys
-              taking an idea from a blank screen to a
-              complete, usable product — frontend,
-              backend, database and deployment.
-            </p>
-          </Reveal>
-          <div className="about-grid">
-
-            <Reveal delay={0.1}>
-
-              <TiltCard className="glass-card">
-
-                <h3>
-                  Who I Am
-                </h3>
-
-                <p>
-                  I work primarily with Python,
-                  Django, React.js and MySQL.
-                  I enjoy solving practical problems,
-                  learning new technologies and
-                  creating applications with clean
-                  architecture.
-                </p>
-
-                <div className="quote">
-                  "I don't just want to write code.
-                  I want to build something useful."
-                </div>
-
-              </TiltCard>
+                </motion.div>
+              </div>
             </Reveal>
-
             <Reveal delay={0.2}>
-              <TiltCard className="glass-card">
-
-                <h3>
-                  What I Build
-                </h3>
-
-                <p>
-                  Responsive interfaces, backend
-                  systems, REST APIs, authentication
-                  flows, CRUD applications,
-                  database-driven platforms and
-                  complete full-stack solutions.
-                </p>
-
-                <div className="quote">
-                  React + Django + REST API +
-                  Database + Deployment
-                </div>
-
-              </TiltCard>
-
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="skills"
-        className="section"
-      >
-        <div className="container">
-          <Reveal>
-
-            <div className="section-tag">
-              03 — SKILLS
-            </div>
-
-            <h2 className="section-title">
-              My technical
-              <br />
-              toolkit.
-            </h2>
-
-            <p className="section-description">
-              The technologies I use to design,
-              develop and ship modern web applications.
-            </p>
-          </Reveal>
-          <div className="skills-grid">
-
-            {skills.map(
-              (skill, index) => (
-
-                <Reveal
-                  key={skill.title}
-                  delay={
-                    index * 0.08
-                  }
-                >
-                  <TiltCard className="skill-card">
-                    <motion.div
-                      className="skill-icon"
-
-                      animate={{
-                        y: [
-                          0,
-                          -6,
-                          0,
-                        ],
-
-                        rotate: [
-                          0,
-                          4,
-                          0,
-                        ],
-                      }}
-
-                      transition={{
-                        duration:
-                          3 +
-                          index *
-                          0.2,
-
-                        repeat:
-                          Infinity,
-                      }}
-                    >
-                      {skill.icon}
-                    </motion.div>
-                    <h3>
-                      {skill.title}
-                    </h3>
-                    <p>
-                      {skill.text}
-                    </p>
-                  </TiltCard>
-                </Reveal>
-
-              )
-            )}
-          </div>
-
-          <Reveal delay={0.2}>
-
-            <div className="technology-wrapper">
-
-              <div className="technology-track">
-
-                {[
-                  ...technologies,
-                  ...technologies,
-                ].map(
-                  (technology, index) => (
-
-                    <span
-                      className="technology"
-                      key={
-                        `${technology}-${index}`
-                      }
-                    >
-                      {technology}
-                    </span>
-
-                  )
-                )}
-
-              </div>
-
-            </div>
-
-          </Reveal>
-
-        </div>
-      </section>
-
-      <section
-        id="experience"
-        className="section"
-      >
-        <div className="container">
-
-          <Reveal>
-
-            <div className="section-tag">
-              04 — EXPERIENCE
-            </div>
-
-            <h2 className="section-title">
-              My journey
-              <br />
-              so far.
-            </h2>
-
-          </Reveal>
-
-
-          <div className="timeline">
-
-            {experience.map(
-              (item, index) => (
-
-                <Reveal
-                  key={item.title}
-                  delay={
-                    index * 0.12
-                  }
-                >
-
-                  <motion.div
-                    className="experience-item"
-
-                    whileHover={{
-                      x: 8,
-                    }}
-                  >
-                    <span className="timeline-dot" />
-                    <div className="experience-year">
-                      {item.year}
-                    </div>
-                    <h3>
-                      {item.title}
-                    </h3>
-                    <div className="experience-company">
-                      {item.company}
-                    </div>
-                    <p>
-                      {item.description}
-                    </p>
-
-                  </motion.div>
-
-                </Reveal>
-
-              )
-            )}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="projects"
-        className="section"
-      >
-
-        <div className="container">
-
-          <Reveal>
-
-            <div className="section-tag">
-              05 — SELECTED WORK
-            </div>
-
-            <h2 className="section-title">
-              Things I've
-              <br />
-              built.
-            </h2>
-
-            <p className="section-description">
-              A selection of projects where frontend,
-              backend, databases and deployment come
-              together to solve real problems.
-            </p>
-
-          </Reveal>
-
-
-          <div className="projects-grid">
-
-            {projects.map(
-              (project, index) => (
-
-                <Reveal
-                  key={project.number}
-                  delay={
-                    index * 0.1
-                  }
-                >
-
-                  <TiltCard
-                    className="project-card"
-
-                    onMouseEnter={() =>
-                      setActiveProject(
-                        project.number
-                      )
-                    }
-
-                    onMouseLeave={() =>
-                      setActiveProject(
-                        null
-                      )
-                    }
-                  >
-
-                    <div className="project-number">
-                      PROJECT{" "}
-                      {project.number}
-                    </div>
-
-
-                    <motion.h3
-                      animate={
-                        activeProject ===
-                          project.number
-                          ? {
-                            x: 7,
-                          }
-                          : {
-                            x: 0,
-                          }
-                      }
-                    >
-                      {project.title}
-                    </motion.h3>
-
-
-                    <p>
-                      {project.description}
-                    </p>
-
-
-                    <div className="project-tags">
-
-                      {project.technologies.map(
-                        (technology) => (
-
-                          <span
-                            className="project-tag"
-                            key={
-                              technology
-                            }
-                          >
-                            {technology}
-                          </span>
-
-                        )
-                      )}
-
-                    </div>
-
-
-                    <div className="project-links">
-
-                      {project.live !==
-                        "#" && (
-
-                          <a
-                            className="project-link"
-                            href={
-                              project.live
-                            }
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Live Demo ↗
-                          </a>
-
-                        )}
-
-
-                      {project.github !==
-                        "#" && (
-
-                          <a
-                            className="project-link"
-                            href={
-                              project.github
-                            }
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            GitHub ↗
-                          </a>
-
-                        )}
-
-                    </div>
-
-                  </TiltCard>
-
-                </Reveal>
-
-              )
-            )}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section
-        id="achievements"
-        className="section academic-section"
-      >
-        <div className="container">
-
-          {/* ================= HEADER ================= */}
-
-          <div className="academic-header">
-
-            <div className="academic-heading">
-
-              <div className="section-tag">
-                06 — ACADEMIC AWARDS
-              </div>
-
-              <h2 className="section-title">
-                3x Academic
-                <br />
-                <span>Award Winner.</span>
-              </h2>
-
-              <p className="section-description">
-                Recognized with academic excellence awards
-                across three consecutive years of college.
-              </p>
-
-            </div>
-
-
-            {/* BIG 3X NUMBER */}
-
-            <div className="academic-highlight">
-
-              <div className="academic-big-number">
-                3
-              </div>
-
-              <div className="academic-highlight-text">
-                <strong>YEARS</strong>
-                <span>ACADEMIC<br />EXCELLENCE</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* ================= ACADEMIC PHOTO GALLERY ================= */}
-
-          <div className="academic-gallery">
-
-            {achievements.map((item, index) => (
-
-              <Reveal
-                key={item.year}
-                delay={index * 0.12}
+              <motion.div
+                className="profile-container"
+
+                animate={{
+                  y: [0, -12, 0],
+                  rotate: [0, 0.5, 0],
+                }}
+
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
+                <div className="profile-ring" />
 
-                <TiltCard className="academic-card">
+                <div className="profile-ring-two" />
 
-                  {/* PHOTO */}
 
-                  <div className="academic-image-wrapper">
+                <motion.div
+                  className="profile-box"
+                  whileHover={{
+                    scale: 1.025,
+                  }}
+                >
 
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="academic-image"
-                    />
+                  <img
+                    src={profilePic}
+                    alt="Roushan Kumar"
+                  />
 
-                    <div className="academic-image-overlay" />
 
-                    <div className="academic-award-icon">
-                      🏆
-                    </div>
+                  <div className="profile-info">
 
-                    <div className="academic-photo-number">
-                      0{index + 1}
-                    </div>
+                    <strong>
+                      Roushan Kumar
+                    </strong>
+
+                    <small>
+                      FULL STACK DEVELOPER
+                    </small>
 
                   </div>
 
+                </motion.div>
 
-                  {/* CONTENT */}
+              </motion.div>
 
-                  <div className="academic-content">
+            </Reveal>
 
-                    <div className="academic-year">
-                      {item.year}
-                    </div>
+          </div>
 
-                    <h3>
-                      {item.title}
-                    </h3>
+        </section>
 
-                    <p>
-                      {item.text}
-                    </p>
+        <div className="stats">
 
+          <div className="stat">
+
+            <div className="stat-number">
+              <Counter value={1} />+
+            </div>
+
+            <div className="stat-label">
+              Year+ Development Experience
+            </div>
+
+          </div>
+
+          <div className="stat">
+
+            <div className="stat-number">
+              <Counter value={14} />+
+            </div>
+
+            <div className="stat-label">
+              Technologies & Tools
+            </div>
+
+          </div>
+
+          <div className="stat">
+
+            <div className="stat-number">
+              <Counter value={10} />+
+            </div>
+
+            <div className="stat-label">
+              Featured Projects
+            </div>
+          </div>
+        </div>
+
+
+
+        <section
+          id="about"
+          className="section"
+        >
+          <div className="container">
+            <Reveal>
+              <div className="section-tag">
+                02 — ABOUT ME
+              </div>
+
+              <h2 className="section-title">
+                The person behind
+                <br />
+                the code.
+              </h2>
+              <p className="section-description">
+                I'm a Full Stack Developer who enjoys
+                taking an idea from a blank screen to a
+                complete, usable product — frontend,
+                backend, database and deployment.
+              </p>
+            </Reveal>
+            <div className="about-grid">
+
+              <Reveal delay={0.1}>
+
+                <TiltCard className="glass-card">
+
+                  <h3>
+                    Who I Am
+                  </h3>
+
+                  <p>
+                    I work primarily with Python,
+                    Django, React.js and MySQL.
+                    I enjoy solving practical problems,
+                    learning new technologies and
+                    creating applications with clean
+                    architecture.
+                  </p>
+
+                  <div className="quote">
+                    "I don't just want to write code.
+                    I want to build something useful."
+                  </div>
+
+                </TiltCard>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <TiltCard className="glass-card">
+
+                  <h3>
+                    What I Build
+                  </h3>
+
+                  <p>
+                    Responsive interfaces, backend
+                    systems, REST APIs, authentication
+                    flows, CRUD applications,
+                    database-driven platforms and
+                    complete full-stack solutions.
+                  </p>
+
+                  <div className="quote">
+                    React + Django + REST API +
+                    Database + Deployment
                   </div>
 
                 </TiltCard>
 
               </Reveal>
+            </div>
+          </div>
+        </section>
 
-            ))}
+        <section
+          id="skills"
+          className="section"
+        >
+          <div className="container">
+            <Reveal>
+
+              <div className="section-tag">
+                03 — SKILLS
+              </div>
+
+              <h2 className="section-title">
+                My technical
+                <br />
+                toolkit.
+              </h2>
+
+              <p className="section-description">
+                The technologies I use to design,
+                develop and ship modern web applications.
+              </p>
+            </Reveal>
+            <div className="skills-grid">
+
+              {skills.map(
+                (skill, index) => (
+
+                  <Reveal
+                    key={skill.title}
+                    delay={
+                      index * 0.08
+                    }
+                  >
+                    <TiltCard className="skill-card">
+                      <motion.div
+                        className="skill-icon"
+
+                        animate={{
+                          y: [
+                            0,
+                            -6,
+                            0,
+                          ],
+
+                          rotate: [
+                            0,
+                            4,
+                            0,
+                          ],
+                        }}
+
+                        transition={{
+                          duration:
+                            3 +
+                            index *
+                            0.2,
+
+                          repeat:
+                            Infinity,
+                        }}
+                      >
+                        {skill.icon}
+                      </motion.div>
+                      <h3>
+                        {skill.title}
+                      </h3>
+                      <p>
+                        {skill.text}
+                      </p>
+                    </TiltCard>
+                  </Reveal>
+
+                )
+              )}
+            </div>
+
+            <Reveal delay={0.2}>
+
+              <div className="technology-wrapper">
+
+                <div className="technology-track">
+
+                  {[
+                    ...technologies,
+                    ...technologies,
+                  ].map(
+                    (technology, index) => (
+
+                      <span
+                        className="technology"
+                        key={
+                          `${technology}-${index}`
+                        }
+                      >
+                        {technology}
+                      </span>
+
+                    )
+                  )}
+
+                </div>
+
+              </div>
+
+            </Reveal>
+
+          </div>
+        </section>
+
+        <section
+          id="experience"
+          className="section"
+        >
+          <div className="container">
+
+            <Reveal>
+
+              <div className="section-tag">
+                04 — EXPERIENCE
+              </div>
+
+              <h2 className="section-title">
+                My journey
+                <br />
+                so far.
+              </h2>
+
+            </Reveal>
+
+
+            <div className="timeline">
+
+              {experience.map(
+                (item, index) => (
+
+                  <Reveal
+                    key={item.title}
+                    delay={
+                      index * 0.12
+                    }
+                  >
+
+                    <motion.div
+                      className="experience-item"
+
+                      whileHover={{
+                        x: 8,
+                      }}
+                    >
+                      <span className="timeline-dot" />
+                      <div className="experience-year">
+                        {item.year}
+                      </div>
+                      <h3>
+                        {item.title}
+                      </h3>
+                      <div className="experience-company">
+                        {item.company}
+                      </div>
+                      <p>
+                        {item.description}
+                      </p>
+
+                    </motion.div>
+
+                  </Reveal>
+
+                )
+              )}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="projects"
+          className="section"
+        >
+
+          <div className="container">
+
+            <Reveal>
+
+              <div className="section-tag">
+                05 — SELECTED WORK
+              </div>
+
+              <h2 className="section-title">
+                Things I've
+                <br />
+                built.
+              </h2>
+
+              <p className="section-description">
+                A selection of projects where frontend,
+                backend, databases and deployment come
+                together to solve real problems.
+              </p>
+
+            </Reveal>
+
+
+            <div className="projects-grid">
+
+              {projects.map(
+                (project, index) => (
+
+                  <Reveal
+                    key={project.number}
+                    delay={
+                      index * 0.1
+                    }
+                  >
+
+                    <TiltCard
+                      className="project-card"
+
+                      onMouseEnter={() =>
+                        setActiveProject(
+                          project.number
+                        )
+                      }
+
+                      onMouseLeave={() =>
+                        setActiveProject(
+                          null
+                        )
+                      }
+                    >
+
+                      <div className="project-number">
+                        PROJECT{" "}
+                        {project.number}
+                      </div>
+
+
+                      <motion.h3
+                        animate={
+                          activeProject ===
+                            project.number
+                            ? {
+                              x: 7,
+                            }
+                            : {
+                              x: 0,
+                            }
+                        }
+                      >
+                        {project.title}
+                      </motion.h3>
+
+
+                      <p>
+                        {project.description}
+                      </p>
+
+
+                      <div className="project-tags">
+
+                        {project.technologies.map(
+                          (technology) => (
+
+                            <span
+                              className="project-tag"
+                              key={
+                                technology
+                              }
+                            >
+                              {technology}
+                            </span>
+
+                          )
+                        )}
+
+                      </div>
+
+
+                      <div className="project-links">
+
+                        {project.live !==
+                          "#" && (
+
+                            <a
+                              className="project-link"
+                              href={
+                                project.live
+                              }
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Live Demo ↗
+                            </a>
+
+                          )}
+
+
+                        {project.github !==
+                          "#" && (
+
+                            <a
+                              className="project-link"
+                              href={
+                                project.github
+                              }
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              GitHub ↗
+                            </a>
+
+                          )}
+
+                      </div>
+
+                    </TiltCard>
+
+                  </Reveal>
+
+                )
+              )}
+
+            </div>
 
           </div>
 
+        </section>
 
-          {/* ================= BOTTOM ACHIEVEMENT STRIP ================= */}
+        <section
+          id="achievements"
+          className="section academic-section"
+        >
+          <div className="container">
 
-          <Reveal delay={0.35}>
+            {/* ================= HEADER ================= */}
 
-            <div className="academic-bottom">
+            <div className="academic-header">
 
-              <div className="academic-bottom-item">
+              <div className="academic-heading">
 
-                <span className="academic-bottom-number">
+                <div className="section-tag">
+                  06 — ACADEMIC AWARDS
+                </div>
+
+                <h2 className="section-title">
+                  3x Academic
+                  <br />
+                  <span>Award Winner.</span>
+                </h2>
+
+                <p className="section-description">
+                  Recognized with academic excellence awards
+                  across three consecutive years of college.
+                </p>
+
+              </div>
+
+
+              {/* BIG 3X NUMBER */}
+
+              <div className="academic-highlight">
+
+                <div className="academic-big-number">
                   3
-                </span>
+                </div>
 
-                <span>
-                  Consecutive<br />
-                  Academic Years
-                </span>
-
-              </div>
-
-
-              <div className="academic-divider" />
-
-
-              <div className="academic-bottom-item">
-
-                <span className="academic-bottom-icon">
-                  ✦
-                </span>
-
-                <span>
-                  Consistent<br />
-                  Academic Excellence
-                </span>
-
-              </div>
-
-
-              <div className="academic-divider" />
-
-
-              <div className="academic-bottom-item">
-
-                <span className="academic-bottom-icon">
-                  🏆
-                </span>
-
-                <span>
-                  Awarded for<br />
-                  Outstanding Performance
-                </span>
+                <div className="academic-highlight-text">
+                  <strong>YEARS</strong>
+                  <span>ACADEMIC<br />EXCELLENCE</span>
+                </div>
 
               </div>
 
             </div>
 
-          </Reveal>
 
-        </div>
+            {/* ================= ACADEMIC PHOTO GALLERY ================= */}
+
+            <div className="academic-gallery">
+
+              {achievements.map((item, index) => (
+
+                <Reveal
+                  key={item.year}
+                  delay={index * 0.12}
+                >
+
+                  <TiltCard className="academic-card">
+
+                    {/* PHOTO */}
+
+                    <div className="academic-image-wrapper">
+
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="academic-image"
+                      />
+
+                      <div className="academic-image-overlay" />
+
+                      <div className="academic-award-icon">
+                        🏆
+                      </div>
+
+                      <div className="academic-photo-number">
+                        0{index + 1}
+                      </div>
+
+                    </div>
 
 
-        {/* ================= ACADEMIC CSS ================= */}
+                    {/* CONTENT */}
 
-        <style>{`
+                    <div className="academic-content">
+
+                      <div className="academic-year">
+                        {item.year}
+                      </div>
+
+                      <h3>
+                        {item.title}
+                      </h3>
+
+                      <p>
+                        {item.text}
+                      </p>
+
+                    </div>
+
+                  </TiltCard>
+
+                </Reveal>
+
+              ))}
+
+            </div>
+
+
+            {/* ================= BOTTOM ACHIEVEMENT STRIP ================= */}
+
+            <Reveal delay={0.35}>
+
+              <div className="academic-bottom">
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-number">
+                    3
+                  </span>
+
+                  <span>
+                    Consecutive<br />
+                    Academic Years
+                  </span>
+
+                </div>
+
+
+                <div className="academic-divider" />
+
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-icon">
+                    ✦
+                  </span>
+
+                  <span>
+                    Consistent<br />
+                    Academic Excellence
+                  </span>
+
+                </div>
+
+
+                <div className="academic-divider" />
+
+
+                <div className="academic-bottom-item">
+
+                  <span className="academic-bottom-icon">
+                    🏆
+                  </span>
+
+                  <span>
+                    Awarded for<br />
+                    Outstanding Performance
+                  </span>
+
+                </div>
+
+              </div>
+
+            </Reveal>
+
+          </div>
+
+
+          {/* ================= ACADEMIC CSS ================= */}
+
+          <style>{`
 
     /* =========================================
        ACADEMIC SECTION
@@ -4032,90 +4032,90 @@ return (
 
   `}</style>
 
-      </section>
+        </section>
 
-      <section className="experience-section" id="leadership">
-        <div className="experience-container">
+        <section className="experience-section" id="leadership">
+          <div className="experience-container">
 
-          <div className="experience-top">
+            <div className="experience-top">
 
 
-            <div className="experience-heading">
-              <span className="section-small-title">07 — LEADERSHIP</span>
+              <div className="experience-heading">
+                <span className="section-small-title">07 — LEADERSHIP</span>
 
-              <h2>
-                Leadership &{" "}
-                <span>Achievements</span>
-              </h2>
+                <h2>
+                  Leadership &{" "}
+                  <span>Achievements</span>
+                </h2>
 
-              <p>
-                My journey as a Head Student Co-Ordinator in the Training and
-                Placement Department of Radharaman Group Of Institutions,Bhopal working with students, faculty and
-                placement teams while taking responsibility for coordination,
-                leadership and event management.
-              </p>
-            </div>
-
-            <div className="years-card">
-
-              <div className="years-top">
-                <span className="years-label">EXPERIENCE</span>
-
-                <span className="years-dot"></span>
+                <p>
+                  My journey as a Head Student Co-Ordinator in the Training and
+                  Placement Department of Radharaman Group Of Institutions,Bhopal working with students, faculty and
+                  placement teams while taking responsibility for coordination,
+                  leadership and event management.
+                </p>
               </div>
 
-              <div className="years-number">
-                3<span>+</span>
-              </div>
+              <div className="years-card">
 
-              <div className="years-title">
-                YEARS OF LEADERSHIP
-              </div>
+                <div className="years-top">
+                  <span className="years-label">EXPERIENCE</span>
 
-              <p>
-                Training & Placement Department of Radharaman Group Of Institutions,Bhopal
-              </p>
+                  <span className="years-dot"></span>
+                </div>
 
-              <div className="years-line"></div>
+                <div className="years-number">
+                  3<span>+</span>
+                </div>
 
-              <span className="years-role">
-                Head Student Co-Ordinator
-              </span>
+                <div className="years-title">
+                  YEARS OF LEADERSHIP
+                </div>
 
-            </div>
+                <p>
+                  Training & Placement Department of Radharaman Group Of Institutions,Bhopal
+                </p>
 
-          </div>
+                <div className="years-line"></div>
 
-          <div className="experience-gallery">
-            <div className="experience-card landscape-card card-1">
+                <span className="years-role">
+                  Head Student Co-Ordinator
+                </span>
 
-              <img
-                src="src/assets/gallery/IMG-20260610-WA0021.jpg"
-                alt="Training and Placement Team"
-              />
-
-              <div className="experience-overlay">
-                <h3>Core Leadership</h3>
-                <p>Training & Placement Department</p>
-              </div>
-
-            </div>
-            <div className="experience-card portrait-card card-2">
-
-              <img
-                src="src/assets/gallery/nn.jpeg"
-                alt="Award and Certificate"
-              />
-
-              <div className="experience-overlay">
-                <h3>Achievement</h3>
-                <p>Certificate & Award</p>
               </div>
 
             </div>
 
+            <div className="experience-gallery">
+              <div className="experience-card landscape-card card-1">
 
-            {/* 
+                <img
+                  src="src/assets/gallery/IMG-20260610-WA0021.jpg"
+                  alt="Training and Placement Team"
+                />
+
+                <div className="experience-overlay">
+                  <h3>Core Leadership</h3>
+                  <p>Training & Placement Department</p>
+                </div>
+
+              </div>
+              <div className="experience-card portrait-card card-2">
+
+                <img
+                  src="src/assets/gallery/nn.jpeg"
+                  alt="Award and Certificate"
+                />
+
+                <div className="experience-overlay">
+                  <h3>Achievement</h3>
+                  <p>Certificate & Award</p>
+                </div>
+
+              </div>
+
+
+              {/* 
               <div className="experience-card landscape-card card-3">
 
                 <img
@@ -4132,7 +4132,7 @@ return (
 
 
 
-            {/* <div className="experience-card landscape-card card-4">
+              {/* <div className="experience-card landscape-card card-4">
 
                 <img
                   src="src/assets/gallery/IMG-20260610-WA0059.jpg"
@@ -4146,36 +4146,36 @@ return (
 
               </div> */}
 
-            <div className="experience-card landscape-card card-5">
+              <div className="experience-card landscape-card card-5">
 
-              <img
-                src="src/assets/gallery/IMG-20260610-WA0035.jpg"
-                alt="Placement Team"
-              />
+                <img
+                  src="src/assets/gallery/IMG-20260610-WA0035.jpg"
+                  alt="Placement Team"
+                />
 
-              <div className="experience-overlay">
-                <h3>Placement Team</h3>
-                <p>Training & Placement Cell</p>
+                <div className="experience-overlay">
+                  <h3>Placement Team</h3>
+                  <p>Training & Placement Cell</p>
+                </div>
+
               </div>
 
-            </div>
+              <div className="experience-card portrait-card card-6">
 
-            <div className="experience-card portrait-card card-6">
+                <img
+                  src="src/assets/gallery/IMG-20260610-WA0026.jpg"
+                  alt="Certificate Achievement"
+                />
 
-              <img
-                src="src/assets/gallery/IMG-20260610-WA0026.jpg"
-                alt="Certificate Achievement"
-              />
+                <div className="experience-overlay">
+                  <h3>Achievement</h3>
+                  <p>Head Student Co-Ordinator</p>
+                </div>
 
-              <div className="experience-overlay">
-                <h3>Achievement</h3>
-                <p>Head Student Co-Ordinator</p>
               </div>
-
             </div>
           </div>
-        </div>
-        <style>{`
+          <style>{`
  
 
     .experience-section {
@@ -4892,180 +4892,191 @@ return (
     }
 
   `}</style>
-      </section>
+        </section>
 
-      <section
-        id="certification"
-        className="section certification-section"
-      >
-        <div className="container">
-          <Reveal>
-            <div className="section-tag">
-              08 — CERTIFICATIONS
+        <section
+          id="certification"
+          className="section certification-section"
+        >
+          <div className="container">
+            <Reveal>
+              <div className="section-tag">
+                08 — CERTIFICATIONS
+              </div>
+
+              <h2 className="section-title">
+                Certifications that
+                <br />
+                <span>strengthen my skills.</span>
+              </h2>
+
+              <p className="section-description">
+                Professional certifications and training completed
+                across Python Full Stack, web development and technical programs.
+              </p>
+            </Reveal>
+
+            <div className="certification-grid">
+              <Reveal delay={0.08}>
+                <TiltCard className="certification-card">
+                  <div className="certification-number">01</div>
+                  <div className="certification-icon">🐍</div>
+                  <div className="certification-date">JUL 2025 — FEB 2026</div>
+                  <h3>Advanced Certification in Python FullStack</h3>
+                  <p>E&amp;ICT Academy, IIT Guwahati</p>
+                </TiltCard>
+              </Reveal>
+
+              <Reveal delay={0.16}>
+                <TiltCard className="certification-card">
+                  <div className="certification-number">02</div>
+                  <div className="certification-icon">🌐</div>
+                  <div className="certification-date">FEB 2025 — APR 2025</div>
+                  <h3>Web Page Designing &amp; Development</h3>
+                  <p>BECIL, Govt. of India</p>
+                </TiltCard>
+              </Reveal>
+
+              <Reveal delay={0.24}>
+                <TiltCard className="certification-card">
+                  <div className="certification-number">03</div>
+                  <div className="certification-icon">💻</div>
+                  <div className="certification-date">MAY 2022 — AUG 2022</div>
+                  <h3>Kushal Yuva Program (KYP)</h3>
+                  <p>BSDM &amp; SCVT, Govt. of Bihar</p>
+                </TiltCard>
+              </Reveal>
             </div>
+          </div>
+        </section>
 
-            <h2 className="section-title">
-              Certifications that
-              <br />
-              <span>strengthen my skills.</span>
-            </h2>
+        <section
+          id="gallery"
+          className="section"
+        >
+          <div className="container">
+            <Reveal>
+              <div className="section-tag">
+                09 — MOMENTS
+              </div>
 
-            <p className="section-description">
-              Professional certifications and training completed
-              across Python Full Stack, web development and technical programs.
-            </p>
-          </Reveal>
+              <h2 className="section-title">
+                Beyond the <span>code.</span>
+              </h2>
 
-          <div className="certification-grid">
-            <Reveal delay={0.08}>
-              <TiltCard className="certification-card">
-                <div className="certification-number">01</div>
-                <div className="certification-icon">🐍</div>
-                <div className="certification-date">JUL 2025 — FEB 2026</div>
-                <h3>Advanced Certification in Python FullStack</h3>
-                <p>E&amp;ICT Academy, IIT Guwahati</p>
-              </TiltCard>
+              <p className="section-description">
+                A few frames from events, stages and moments
+                outside the editor — because there's more to
+                the story than just code.
+              </p>
             </Reveal>
 
-            <Reveal delay={0.16}>
-              <TiltCard className="certification-card">
-                <div className="certification-number">02</div>
-                <div className="certification-icon">🌐</div>
-                <div className="certification-date">FEB 2025 — APR 2025</div>
-                <h3>Web Page Designing &amp; Development</h3>
-                <p>BECIL, Govt. of India</p>
-              </TiltCard>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <TiltCard className="certification-card">
-                <div className="certification-number">03</div>
-                <div className="certification-icon">💻</div>
-                <div className="certification-date">MAY 2022 — AUG 2022</div>
-                <h3>Kushal Yuva Program (KYP)</h3>
-                <p>BSDM &amp; SCVT, Govt. of Bihar</p>
-              </TiltCard>
+            <Reveal delay={0.15}>
+              <div style={{ marginTop: "55px" }}>
+                <GalleryRow items={galleryRowOne} duration={45} />
+                <GalleryRow items={galleryRowTwo} duration={52} reverse />
+              </div>
             </Reveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        id="gallery"
-        className="section"
-      >
-        <div className="container">
-          <Reveal>
-            <div className="section-tag">
-              09 — MOMENTS
-            </div>
+        <section
+          id="contact"
+          className="section"
+        >
 
-            <h2 className="section-title">
-              Beyond the <span>code.</span>
-            </h2>
+          <div className="container">
 
-            <p className="section-description">
-              A few frames from events, stages and moments
-              outside the editor — because there's more to
-              the story than just code.
-            </p>
-          </Reveal>
+            <Reveal>
 
-          <Reveal delay={0.15}>
-            <div style={{ marginTop: "55px" }}>
-              <GalleryRow items={galleryRowOne} duration={45} />
-              <GalleryRow items={galleryRowTwo} duration={52} reverse />
-            </div>
-          </Reveal>
-        </div>
-      </section>
+              <div className="contact-box">
 
-      <section
-        id="contact"
-        className="section"
-      >
+                <div className="contact-ring" />
 
-        <div className="container">
-
-          <Reveal>
-
-            <div className="contact-box">
-
-              <div className="contact-ring" />
-
-              <div className="contact-ring contact-ring-two" />
+                <div className="contact-ring contact-ring-two" />
 
 
-              <div className="contact-content">
+                <div className="contact-content">
 
-                <div className="section-tag">
-                  10 — GET IN TOUCH
-                </div>
-
-
-                <h2 className="contact-title">
-                  Let's build
-                  <br />
-                  something great.
-                </h2>
-                <p className="contact-description">
-                  I'm open to exciting opportunities,
-                  freelance projects and collaborations.
-                  If you have an idea or opportunity,
-                  let's talk.
-                </p>
+                  <div className="section-tag">
+                    10 — GET IN TOUCH
+                  </div>
 
 
-                <div className="contact-buttons">
-
-                  <a
-                    className="button primary-button"
-                    href="mailto:roushan8114@gmail.com"
-                  >
-                    Send Me an Email →
-                  </a>
-
+                  <h2 className="contact-title">
+                    Let's build
+                    <br />
+                    something great.
+                  </h2>
+                  <p className="contact-description">
+                    I'm open to exciting opportunities,
+                    freelance projects and collaborations.
+                    If you have an idea or opportunity,
+                    let's talk.
+                  </p>
 
                   <a
                     className="button secondary-button"
-                    href="https://github.com/roushan8114"
+                    // href="https://linkedin.com/in/roushan999"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    GitHub ↗
+                    +91-8114544790
                   </a>
 
 
-                  <a
-                    className="button secondary-button"
-                    href="https://linkedin.com/in/roushan999"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    LinkedIn ↗
-                  </a>
+                  <div className="contact-buttons">
+
+                    <a
+                      className="button primary-button"
+                      href="mailto:roushan8114@gmail.com"
+                    >
+                      Send Me an Email →
+                    </a>
+
+
+                    <a
+                      className="button secondary-button"
+                      href="https://github.com/roushan8114"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub ↗
+                    </a>
+
+
+                    <a
+                      className="button secondary-button"
+                      href="https://linkedin.com/in/roushan999"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      LinkedIn ↗
+                    </a>
+
+
+
+                  </div>
 
                 </div>
 
               </div>
 
-            </div>
+            </Reveal>
 
-          </Reveal>
+          </div>
 
-        </div>
+        </section>
 
-      </section>
-
-      <footer className="footer">
-        © {new Date().getFullYear()}
-        {" "}
-        Roushan Kumar · Built with React,
-        Framer Motion & curiosity.
-      </footer>
-    </div>
-  </>
-);
+        <footer className="footer">
+          © {new Date().getFullYear()}
+          {" "}
+          Roushan Kumar · Built with React,
+          Framer Motion & curiosity.
+        </footer>
+      </div>
+    </>
+  );
 }
 
 export default Home;
