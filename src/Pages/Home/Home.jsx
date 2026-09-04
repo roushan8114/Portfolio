@@ -2016,6 +2016,81 @@ function Home() {
       flex-wrap: wrap;
     }
 
+    .contact-form-wrapper {
+      position: relative;
+      z-index: 2;
+      margin-top: 40px;
+      padding-top: 34px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      text-align: left;
+    }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .form-group label {
+      color: #d4d4d8;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      color: white;
+      padding: 14px 16px;
+      outline: none;
+      font: inherit;
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: rgba(139,92,246,0.7);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 3px rgba(139,92,246,0.08);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #777783;
+      opacity: 1;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .form-submit-button {
+      align-self: flex-start;
+      border: 0;
+    }
+
     .footer {
       padding:
         35px
@@ -2178,6 +2253,14 @@ function Home() {
         padding:
           55px
           18px;
+      }
+
+      .contact-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-submit-button {
+        width: 100%;
       }
     }
 
@@ -5056,6 +5139,83 @@ function Home() {
 
 
 
+                  </div>
+
+                  <div className="contact-form-wrapper">
+                    <form
+                      className="contact-form"
+                      onSubmit={(event) => event.preventDefault()}
+                    >
+                      <div className="contact-form-row">
+                        <div className="form-group">
+                          <label htmlFor="contact-name">Name</label>
+                          <input
+                            id="contact-name"
+                            name="name"
+                            type="text"
+                            placeholder="Enter your name"
+                            required
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label htmlFor="contact-email">Email</label>
+                          <input
+                            id="contact-email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="contact-form-row">
+                        <div className="form-group">
+                          <label htmlFor="contact-number">Contact</label>
+                          <input
+                            id="contact-number"
+                            name="contact"
+                            type="tel"
+                            placeholder="Enter your contact number"
+                            required
+                          />
+                        </div>
+
+                        <div className="form-group">
+                          <label htmlFor="contact-subject">
+                            Subject of Query
+                          </label>
+                          <input
+                            id="contact-subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Enter subject of your query"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="contact-description">
+                          Description
+                        </label>
+                        <textarea
+                          id="contact-description"
+                          name="description"
+                          rows="6"
+                          placeholder="Write your query..."
+                          required
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="button primary-button form-submit-button"
+                      >
+                        Submit Query →
+                      </button>
+                    </form>
                   </div>
 
                 </div>
