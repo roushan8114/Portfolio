@@ -5000,34 +5000,58 @@ function Home() {
             </Reveal>
 
             <div className="certification-grid">
-              <Reveal delay={0.08}>
-                <TiltCard className="certification-card">
-                  <div className="certification-number">01</div>
-                  <div className="certification-icon">🐍</div>
-                  <div className="certification-date">JUL 2025 — FEB 2026</div>
-                  <h3>Advanced Certification in Python FullStack</h3>
-                  <p>E&amp;ICT Academy, IIT Guwahati</p>
-                </TiltCard>
-              </Reveal>
+              <navlink>
+                <a
+                  href="https://drive.google.com/file/d/1FJ3DvbkEGI3McCNlJEtKMpPi04dUDdqC/view?usp=drive_link"
+                  target="_blank"
+                  rel="noreferrer"
+                ><Reveal delay={0.08}>
+                    <TiltCard className="certification-card">
+                      <div className="certification-number">01</div>
+                      <div className="certification-icon">🐍</div>
+                      <div className="certification-date">JUL 2025 — FEB 2026</div>
+                      <h3>Advanced Certification in Python FullStack</h3>
+                      <p>E&amp;ICT Academy, IIT Guwahati</p>
+                    </TiltCard>
+                  </Reveal>
+                </a>
+              </navlink>
+
 
               <Reveal delay={0.16}>
-                <TiltCard className="certification-card">
-                  <div className="certification-number">02</div>
-                  <div className="certification-icon">🌐</div>
-                  <div className="certification-date">FEB 2025 — APR 2025</div>
-                  <h3>Web Page Designing &amp; Development</h3>
-                  <p>BECIL, Govt. of India</p>
-                </TiltCard>
+                <navlink>
+                  <a
+                    href="https://drive.google.com/file/d/12idYTXV-pjqKJ8sUytKeHwFTLMasKusv/view?usp=drive_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <TiltCard className="certification-card">
+                      <div className="certification-number">02</div>
+                      <div className="certification-icon">🌐</div>
+                      <div className="certification-date">FEB 2025 — APR 2025</div>
+                      <h3>Web Page Designing &amp; Development</h3>
+                      <p>BECIL, Govt. of India</p>
+                    </TiltCard>
+                  </a>
+                </navlink>
               </Reveal>
 
               <Reveal delay={0.24}>
-                <TiltCard className="certification-card">
-                  <div className="certification-number">03</div>
-                  <div className="certification-icon">💻</div>
-                  <div className="certification-date">MAY 2022 — AUG 2022</div>
-                  <h3>Kushal Yuva Program (KYP)</h3>
-                  <p>BSDM &amp; SCVT, Govt. of Bihar</p>
-                </TiltCard>
+                <navlink>
+                  <a
+                    href="https://drive.google.com/file/d/1hxdVvX5Z6GliAX2G5o3FM9BlmwuWPDIr/view?usp=drive_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <TiltCard className="certification-card">
+                      <div className="certification-number">03</div>
+                      <div className="certification-icon">💻</div>
+                      <div className="certification-date">MAY 2022 — AUG 2022</div>
+                      <h3>Kushal Yuva Program (KYP)</h3>
+                      <p>BSDM &amp; SCVT, Govt. of Bihar</p>
+                    </TiltCard>
+                  </a>
+                </navlink>
               </Reveal>
             </div>
           </div>
