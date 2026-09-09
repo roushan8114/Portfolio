@@ -5208,7 +5208,7 @@ function Home() {
 
                         <div className="form-group">
                           <label htmlFor="contact-subject">
-                            Subject of Query
+                            Subject Query:
                           </label>
                           <input
                             id="contact-subject"
