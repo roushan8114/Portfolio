@@ -87,6 +87,7 @@ const technologies = [
 
 const projects = [
   {
+    
     number: "01",
     title: "Corporate Management System",
     description:
@@ -133,6 +134,7 @@ const experience = [
     year: "2025 — Present",
     title: "Full Stack Developer",
     // company: "Kalash Enterprises",
+
     description:
       "Developing full-stack applications using React and Django, building REST APIs, integrating databases and creating responsive user experiences.",
   },
@@ -144,14 +146,6 @@ const experience = [
     description:
       "Built Django applications, authentication systems, REST APIs, CRUD applications and database-driven platforms.",
   },
-
-  // {
-  //   year: "3 Years", // <-- yahan exact saal daal dena, jaise "2022 — 2025"
-  //   title: "Head Student Coordinator",
-  //   company: "Training & Placement Department, College",
-  //   description:
-  //     "Led student coordination for the Training & Placement Department for 3 years — managing placement drives, coordinating between students and recruiters, and organizing training sessions and campus events.",
-  // },
 
   {
     year: "2022 — 2024",
