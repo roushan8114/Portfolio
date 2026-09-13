@@ -15,7 +15,6 @@ import galleryPhoto3 from "../../assets/gallery/IMG-20240313-WA0503.jpg";
 import galleryPhoto4 from "../../assets/gallery/IMG-20240313-WA0507.jpg";
 import galleryPhoto5 from "../../assets/gallery/IMG-20260401-WA0430.jpg";
 import galleryPhoto6 from "../../assets/gallery/IMG-20260401-WA0437.jpg";
-// import galleryPhoto7 from "../../assets/gallery/IMG20250111095535.jpg";
 
 import galleryPhoto9 from "../../assets/gallery/IMG_6886 - Copy.JPG";
 import galleryPhoto10 from "../../assets/gallery/photo1.jpg";
@@ -87,7 +86,7 @@ const technologies = [
 
 const projects = [
   {
-    
+
     number: "01",
     title: "Corporate Management System",
     description:
@@ -2501,7 +2500,7 @@ function Home() {
     }
 
 
-    /* ================= CERTIFICATIONS ================= */
+   
 
     .certification-section {
       scroll-margin-top: 95px;
@@ -3359,7 +3358,7 @@ function Home() {
         >
           <div className="container">
 
-            {/* ================= HEADER ================= */}
+
 
             <div className="academic-header">
 
@@ -3401,7 +3400,7 @@ function Home() {
             </div>
 
 
-            {/* ================= ACADEMIC PHOTO GALLERY ================= */}
+
 
             <div className="academic-gallery">
 
@@ -3414,7 +3413,7 @@ function Home() {
 
                   <TiltCard className="academic-card">
 
-                    {/* PHOTO */}
+
 
                     <div className="academic-image-wrapper">
 
@@ -3437,7 +3436,7 @@ function Home() {
                     </div>
 
 
-                    {/* CONTENT */}
+
 
                     <div className="academic-content">
 
@@ -3464,7 +3463,7 @@ function Home() {
             </div>
 
 
-            {/* ================= BOTTOM ACHIEVEMENT STRIP ================= */}
+
 
             <Reveal delay={0.35}>
 
@@ -3524,13 +3523,11 @@ function Home() {
           </div>
 
 
-          {/* ================= ACADEMIC CSS ================= */}
+
 
           <style>{`
 
-    /* =========================================
-       ACADEMIC SECTION
-    ========================================= */
+
 
     .academic-section {
       position: relative;
@@ -3538,9 +3535,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       HEADER
-    ========================================= */
 
     .academic-header {
       display: flex;
@@ -3572,9 +3566,7 @@ function Home() {
     }
 
 
-    /* =========================================
-       BIG 3X HIGHLIGHT
-    ========================================= */
+    
 
     .academic-highlight {
       display: flex;
@@ -3660,9 +3652,7 @@ function Home() {
     }
 
 
-    /* =========================================
-       PHOTO GRID
-    ========================================= */
+   
 
     .academic-gallery {
       display: grid;
@@ -3676,9 +3666,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       CARD
-    ========================================= */
 
     .academic-card {
       position: relative;
@@ -3723,10 +3710,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       IMAGE
-    ========================================= */
-
     .academic-image-wrapper {
       position: relative;
 
@@ -3761,10 +3744,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       IMAGE GRADIENT
-    ========================================= */
-
     .academic-image-overlay {
       position: absolute;
 
@@ -3782,9 +3761,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       TROPHY
-    ========================================= */
 
     .academic-award-icon {
       position: absolute;
@@ -3825,10 +3801,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       PHOTO NUMBER
-    ========================================= */
-
     .academic-photo-number {
       position: absolute;
 
@@ -3844,11 +3816,6 @@ function Home() {
 
       font-weight: 700;
     }
-
-
-    /* =========================================
-       CONTENT
-    ========================================= */
 
     .academic-content {
       padding: 24px 25px 27px;
@@ -3890,11 +3857,6 @@ function Home() {
 
       line-height: 1.7;
     }
-
-
-    /* =========================================
-       BOTTOM STRIP
-    ========================================= */
 
     .academic-bottom {
       margin-top: 30px;
@@ -3973,9 +3935,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       TABLET
-    ========================================= */
 
     @media (max-width: 900px) {
 
@@ -4023,10 +3982,6 @@ function Home() {
 
     }
 
-
-    /* =========================================
-       MOBILE
-    ========================================= */
 
     @media (max-width: 650px) {
 
@@ -4090,9 +4045,6 @@ function Home() {
     }
 
 
-    /* =========================================
-       SMALL MOBILE
-    ========================================= */
 
     @media (max-width: 400px) {
 
@@ -4190,38 +4142,6 @@ function Home() {
                 </div>
 
               </div>
-
-
-              {/* 
-              <div className="experience-card landscape-card card-3">
-
-                <img
-                  src="src/assets/gallery/IMG-20260610-WA0107.jpg"
-                  alt="Team Achievement"
-                />
-
-                <div className="experience-overlay">
-                  <h3>Achievement</h3>
-                  <p>Leadership & Teamwork</p>
-                </div>
-
-              </div> */}
-
-
-
-              {/* <div className="experience-card landscape-card card-4">
-
-                <img
-                  src="src/assets/gallery/IMG-20260610-WA0059.jpg"
-                  alt="Leadership Moment"
-                />
-
-                <div className="experience-overlay">
-                  <h3>Leadership</h3>
-                  <p>Working with the Team</p>
-                </div>
-
-              </div> */}
 
               <div className="experience-card landscape-card card-5">
 
