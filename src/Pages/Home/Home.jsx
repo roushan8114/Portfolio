@@ -4681,7 +4681,6 @@ function Home() {
         rgba(255,255,255,0.18);
     }
 
-
     .impact-icon {
       min-width: 42px;
       height: 42px;
@@ -4702,7 +4701,6 @@ function Home() {
 
       opacity: 0.6;
     }
-
 
     .impact-card h4 {
       margin: 2px 0 8px;
@@ -4781,7 +4779,6 @@ function Home() {
         gap: 40px;
       }
     }
-
 
     @media (max-width: 650px) {
 
@@ -4931,7 +4928,6 @@ function Home() {
                 </a>
               </navlink>
 
-
               <Reveal delay={0.16}>
                 <navlink>
                   <a
@@ -5005,7 +5001,6 @@ function Home() {
           id="contact"
           className="section"
         >
-
           <div className="container">
 
             <Reveal>
@@ -5016,13 +5011,11 @@ function Home() {
 
                 <div className="contact-ring contact-ring-two" />
 
-
                 <div className="contact-content">
 
                   <div className="section-tag">
                     10 — GET IN TOUCH
                   </div>
-
 
                   <h2 className="contact-title">
                     Let's build
@@ -5044,16 +5037,13 @@ function Home() {
                     +91-8114544790
                   </a>
 
-
                   <div className="contact-buttons">
-
                     <a
                       className="button primary-button"
                       href="mailto:roushan8114@gmail.com"
                     >
-                      Send Me an Email →
+                      Send me an Email →
                     </a>
-
 
                     <a
                       className="button secondary-button"
@@ -5073,9 +5063,6 @@ function Home() {
                     >
                       LinkedIn ↗
                     </a>
-
-
-
                   </div>
 
                   <div className="contact-form-wrapper">
