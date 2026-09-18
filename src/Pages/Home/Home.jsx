@@ -395,6 +395,29 @@ function GalleryRow({ items, duration, reverse = false }) {
 
 
 function Home() {
+  const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxhsLgy-dV-7OQDAIcBfL6c6ZwxsIEUJLhY49WE82rXqdAa1S9AdiYqS1CFuP64tgKSwA/exec";
+
+  const handleContactSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      });
+
+      alert("Your query has been submitted successfully! ✅");
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -2009,52 +2032,98 @@ function Home() {
       flex-wrap: wrap;
     }
 
-    .contact-form-wrapper {
-      position: relative;
-      z-index: 2;
+    .contact-two-column {
       margin-top: 40px;
-      padding-top: 34px;
-      border-top: 1px solid rgba(255,255,255,0.12);
+
+      display: grid;
+
+      grid-template-columns:
+        1.5fr
+        0.8fr;
+
+      gap: 28px;
+
+      align-items: stretch;
+
+      text-align: left;
+    }
+
+    .contact-form-side,
+    .contact-links-side {
+      padding: 28px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.09);
+
+      border-radius: 24px;
+
+      background:
+        rgba(255,255,255,0.025);
     }
 
     .contact-form {
       display: flex;
+
       flex-direction: column;
-      gap: 22px;
-      text-align: left;
+
+      gap: 20px;
     }
 
     .contact-form-row {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+
+      grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+      gap: 18px;
     }
 
     .form-group {
       display: flex;
+
       flex-direction: column;
-      gap: 9px;
+
+      gap: 8px;
     }
 
     .form-group label {
       color: #d4d4d8;
+
       font-size: 11px;
+
       font-weight: 800;
+
       letter-spacing: 0.08em;
+
       text-transform: uppercase;
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
+
       box-sizing: border-box;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      background: rgba(255,255,255,0.05);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.14);
+
+      border-radius: 13px;
+
+      background:
+        rgba(255,255,255,0.05);
+
       color: white;
-      padding: 14px 16px;
+
+      padding:
+        13px
+        15px;
+
       outline: none;
+
       font: inherit;
+
       transition:
         border-color 0.25s ease,
         background 0.25s ease,
@@ -2063,25 +2132,83 @@ function Home() {
 
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: rgba(139,92,246,0.7);
-      background: rgba(255,255,255,0.08);
-      box-shadow: 0 0 0 3px rgba(139,92,246,0.08);
+      border-color:
+        rgba(139,92,246,0.7);
+
+      background:
+        rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(139,92,246,0.08);
     }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
       color: #777783;
+
       opacity: 1;
     }
 
     .form-group textarea {
       resize: vertical;
-      min-height: 150px;
+
+      min-height: 145px;
     }
 
     .form-submit-button {
       align-self: flex-start;
+
       border: 0;
+    }
+
+    .contact-links-side {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+    .contact-links-title {
+      font-size: 28px;
+
+      font-weight: 800;
+
+      margin-bottom: 8px;
+    }
+
+    .contact-links-subtitle {
+      color: #7e7e89;
+
+      line-height: 1.7;
+
+      font-size: 13px;
+
+      margin:
+        0
+        0
+        22px;
+    }
+
+    .contact-links-side .contact-buttons {
+      margin-top: 0;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: stretch;
+
+      gap: 10px;
+    }
+
+    .contact-links-side .contact-buttons .button {
+      width: 100%;
+
+      justify-content: center;
+
+      box-sizing: border-box;
     }
 
     .footer {
@@ -2248,8 +2375,17 @@ function Home() {
           18px;
       }
 
+      .contact-two-column {
+        grid-template-columns: 1fr;
+      }
+
       .contact-form-row {
         grid-template-columns: 1fr;
+      }
+
+      .contact-form-side,
+      .contact-links-side {
+        padding: 22px;
       }
 
       .form-submit-button {
@@ -5002,17 +5138,12 @@ function Home() {
           className="section"
         >
           <div className="container">
-
             <Reveal>
-
               <div className="contact-box">
-
                 <div className="contact-ring" />
-
                 <div className="contact-ring contact-ring-two" />
 
                 <div className="contact-content">
-
                   <div className="section-tag">
                     10 — GET IN TOUCH
                   </div>
@@ -5022,6 +5153,7 @@ function Home() {
                     <br />
                     something great.
                   </h2>
+
                   <p className="contact-description">
                     I'm open to exciting opportunities,
                     freelance projects and collaborations.
@@ -5029,127 +5161,138 @@ function Home() {
                     let's talk.
                   </p>
 
-                  <a
-                    className="button secondary-button"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    +91-8114544790
-                  </a>
-
-                  <div className="contact-buttons">
-                    <a
-                      className="button primary-button"
-                      href="mailto:roushan8114@gmail.com"
-                    >
-                      Send me an Email →
-                    </a>
-
-                    <a
-                      className="button secondary-button"
-                      href="https://github.com/roushan8114"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub ↗
-                    </a>
-
-
-                    <a
-                      className="button secondary-button"
-                      href="https://linkedin.com/in/roushan999"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      LinkedIn ↗
-                    </a>
-                  </div>
-
-                  <div className="contact-form-wrapper">
-                    <form
-                      className="contact-form"
-                      onSubmit={(event) => event.preventDefault()}
-                    >
-                      <div className="contact-form-row">
-                        <div className="form-group">
-                          <label htmlFor="contact-name">Name</label>
-                          <input
-                            id="contact-name"
-                            name="name"
-                            type="text"
-                            placeholder="Enter your name"
-                            required
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="contact-email">Email</label>
-                          <input
-                            id="contact-email"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div className="contact-form-row">
-                        <div className="form-group">
-                          <label htmlFor="contact-number">Contact</label>
-                          <input
-                            id="contact-number"
-                            name="contact"
-                            type="tel"
-                            placeholder="Enter your contact number"
-                            required
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="contact-subject">
-                            Subject Query:
-                          </label>
-                          <input
-                            id="contact-subject"
-                            name="subject"
-                            type="text"
-                            placeholder="Enter subject of your query"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-group">
-                        <label htmlFor="contact-description">
-                          Description
-                        </label>
-                        <textarea
-                          id="contact-description"
-                          name="description"
-                          rows="6"
-                          placeholder="Write your query..."
-                          required
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="button primary-button form-submit-button"
+                  <div className="contact-two-column">
+                    <div className="contact-form-side">
+                      <form
+                        className="contact-form"
+                        onSubmit={handleContactSubmit}
                       >
-                        Submit Query →
-                      </button>
-                    </form>
+                        <div className="contact-form-row">
+                          <div className="form-group">
+                            <label htmlFor="contact-name">
+                              Name
+                            </label>
+                            <input
+                              id="contact-name"
+                              name="name"
+                              type="text"
+                              placeholder="Enter your name"
+                              required
+                            />
+                          </div>
+
+                          <div className="form-group">
+                            <label htmlFor="contact-email">
+                              Email
+                            </label>
+                            <input
+                              id="contact-email"
+                              name="email"
+                              type="email"
+                              placeholder="Enter your email"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div className="contact-form-row">
+                          <div className="form-group">
+                            <label htmlFor="contact-number">
+                              Contact
+                            </label>
+                            <input
+                              id="contact-number"
+                              name="contact"
+                              type="tel"
+                              placeholder="Enter your contact number"
+                              required
+                            />
+                          </div>
+
+                          <div className="form-group">
+                            <label htmlFor="contact-subject">
+                              Subject of Query
+                            </label>
+                            <input
+                              id="contact-subject"
+                              name="subject"
+                              type="text"
+                              placeholder="Enter subject of your query"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <label htmlFor="contact-description">
+                            Description
+                          </label>
+                          <textarea
+                            id="contact-description"
+                            name="description"
+                            rows="6"
+                            placeholder="Write your query..."
+                            required
+                          />
+                        </div>
+
+                        <button
+                          type="submit"
+                          className="button primary-button form-submit-button"
+                        >
+                          Submit Query →
+                        </button>
+                      </form>
+                    </div>
+
+                    <div className="contact-links-side">
+                      <div className="contact-links-title">
+                        Get In Touch
+                      </div>
+
+                      <p className="contact-links-subtitle">
+                        You can also reach me directly through these links.
+                      </p>
+
+                      <div className="contact-buttons">
+                        <a
+                          className="button secondary-button"
+                          href="tel:+918114544790"
+                        >
+                          +91-8114544790 ↗
+                        </a>
+
+                        <a
+                          className="button primary-button"
+                          href="mailto:roushan8114@gmail.com"
+                        >
+                          Send Me an Email →
+                        </a>
+
+                        <a
+                          className="button secondary-button"
+                          href="https://github.com/roushan8114"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub ↗
+                        </a>
+
+                        <a
+                          className="button secondary-button"
+                          href="https://linkedin.com/in/roushan999"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          LinkedIn ↗
+                        </a>
+                      </div>
+                    </div>
                   </div>
-
                 </div>
-
               </div>
-
             </Reveal>
-
           </div>
-
         </section>
 
         <footer className="footer">
