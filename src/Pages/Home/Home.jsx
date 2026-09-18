@@ -401,7 +401,7 @@ function Home() {
   const handleContactSubmit = async (event) => {
     event.preventDefault();
 
-    const form = event.target;
+    const form = event.currentTarget;
     const formData = new FormData(form);
 
     try {
